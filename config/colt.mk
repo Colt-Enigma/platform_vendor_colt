@@ -54,5 +54,9 @@ endif
      Recorder \
      Simple-Gallery
 
+# Colt Packages
+  PRODUCT_PACKAGES += \
+    SoundPickerPrebuilt
+
 # ColtOS OTA
 $(call inherit-product-if-exists, vendor/colt/configs/ota.mk)
