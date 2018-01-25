@@ -117,7 +117,8 @@ PRODUCT_PACKAGES += \
     ContactsTheme \
     MessagesTheme \
     DialerTheme \
-    TelecommTheme
+    TelecommTheme \
+    GboardDarkTheme
 
 # QS header styles
 PRODUCT_PACKAGES += \
