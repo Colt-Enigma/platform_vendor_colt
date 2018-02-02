@@ -265,6 +265,10 @@ endif
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay/common
 DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
+# Dex preopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUIGoogle
+
 #Speed tuning
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
