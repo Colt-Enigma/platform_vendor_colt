@@ -172,7 +172,8 @@ PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/fonts/roadrage/road_rage.ttf:system/fonts/RoadRage-Regular.ttf \
     vendor/colt/prebuilt/fonts/neoneon/neoneon.ttf:system/fonts/Neoneon-Regular.ttf \
     vendor/colt/prebuilt/fonts/snowstorm/snowstorm.ttf:system/fonts/Snowstorm-Regular.ttf \
-    vendor/colt/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:system/fonts/ThemeableFont-Regular.ttf
+    vendor/colt/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:system/fonts/ThemeableFont-Regular.ttf \
+    vendor/colt/prebuilt/fonts/Shamshung/Shamshung.ttf:system/fonts/Shamshung.ttf
 
 # Exchange Support
 PRODUCT_PACKAGES += \
