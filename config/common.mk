@@ -43,7 +43,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
-    Turbo \
     ViaBrowser \
     WallpaperPickerGoogle \
     MarkupGoogle \
@@ -100,6 +99,11 @@ PRODUCT_PACKAGES += \
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
+
+# Turbo
+PRODUCT_PACKAGES += \
+    Turbo \
+    turbo.xml
 
 # Extra tools
 PRODUCT_PACKAGES += \
