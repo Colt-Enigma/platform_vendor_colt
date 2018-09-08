@@ -54,6 +54,45 @@ PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
     vendor/colt/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 
+# Colt Packages
+PRODUCT_PACKAGES += \
+    OmniStyle
+
+# Omni Poor Man Themes
+PRODUCT_PACKAGES += \
+    DocumentsUITheme \
+    DialerTheme \
+    TelecommTheme
+
+PRODUCT_PACKAGES += \
+    NotificationsDark \
+    NotificationsLight \
+    NotificationsPrimary
+
+PRODUCT_PACKAGES += \
+    AccentSluttyPink \
+    AccentPixel \
+    AccentGoldenShower \
+    AccentDeepOrange \
+    AccentOmni \
+    AccentWhite \
+    AccentTeal \
+    AccentFromHell \
+    AccentBlueMonday \
+    AccentSmokingGreen \
+    AccentDeadRed \
+    AccentRottenOrange \
+    AccentDeepPurple
+
+PRODUCT_PACKAGES += \
+    PrimaryAlmostBlack \
+    PrimaryBlack \
+    PrimaryOmni \
+    PrimaryWhite \
+    PrimaryColdWhite \
+    PrimaryWarmWhite \
+    PrimaryDarkBlue
+
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
