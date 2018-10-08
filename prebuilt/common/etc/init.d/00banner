@@ -1,0 +1,7 @@
+#!/system/bin/sh
+#
+# Print startup info
+#
+L="log -p i -t aex"
+
+$L "Welcome to Android `getprop ro.build.version.release` / AospExtended `getprop ro.extended.version`";
