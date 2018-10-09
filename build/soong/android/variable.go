@@ -1,4 +1,4 @@
-package android_aosp
+package android_colt
 type Product_variables struct {
 	Additional_gralloc_10_usage_bits struct {
 		Cppflags []string

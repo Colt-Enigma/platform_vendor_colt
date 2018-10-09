@@ -12,29 +12,33 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#Extended Versioning
-COLT_VERSION = ENIGMA
+COLT_TAG=Enigma
 
-#ifndef EXTENDED_BUILD_TYPE
-    EXTENDED_BUILD_TYPE := ALPHA
-#endif
+# COLT RELEASE VERSION
+COLT_VERSION_MAJOR = 3
+COLT_VERSION_MINOR = 0
+COLT_VERSION_MAINTENANCE =
 
-TARGET_PRODUCT_SHORT := $(subst colt_,,$(CUSTOM_BUILD))
-
-
-COLT_BUILD_DATE := $(shell date -u +%Y%m%d-%H%M)
-COLT_MOD_VERSION := Colt-$(COLT_VERSION)-$(COLT_BUILD_DATE)-$(COLT_BUILD_TYPE)
-COLT_FINGERPRINT := Colt/$(COLT_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(COLT_BUILD_DATE)
+VERSION := $(COLT_VERSION_MAJOR).$(COLT_VERSION_MINOR)$(COLT_VERSION_MAINTENANCE)
 
 
-PRODUCT_GENERIC_PROPERTIES += \
-  ro.colt.version=$(COLT_VERSION) \
-  ro.colt.releasetype=$(COLT_BUILD_TYPE) \
-  ro.modversion=$(COLT_MOD_VERSION)
+ifndef COLT_BUILDTYPE
+    ifdef RELEASE_TYPE
+        # Starting with "COLT_" is optional
+        RELEASE_TYPE := $(shell echo $(RELEASE_TYPE) | sed -e 's|^COLT_||g')
+        COLT_BUILDTYPE := $(RELEASE_TYPE)
+    endif
+endif
 
-COLT_DISPLAY_VERSION := Colt-$(COLT_VERSION)-$(COLT_BUILD_TYPE)
+ifeq ($(COLT_BUILDTYPE), OFFICIAL)
+    COLT_VERSION := ColtOS-$(COLT_TAG)-$(VERSION)_$(COLT_BUILDTYPE)-$(shell date -u +%Y%m%d)-$(COLT_BUILD)
 
-PRODUCT_GENERIC_PROPERTIES += \
-  ro.colt.display.version=$(COLT_DISPLAY_VERSION) \
-  ro.colt.fingerprint=$(COLT_FINGERPRINT)
+else ifeq ($(COLT_BUILDTYPE), EXPERIMENTAL)
+    COLT_VERSION := ColtOS-$(COLT_TAG)-$(VERSION)_$(COLT_BUILDTYPE)-$(shell date -u +%Y%m%d)-$(COLT_BUILD) 
+
+else
+    # If COLT_BUILDTYPE is not defined, set to UNOFFICIAL
+    COLT_BUILDTYPE := UNOFFICIAL
+    COLT_VERSION := ColtOS-$(COLT_TAG)-$(VERSION)_$(COLT_BUILDTYPE)-$(shell date -u +%Y%m%d)-$(COLT_BUILD)
+endif
 

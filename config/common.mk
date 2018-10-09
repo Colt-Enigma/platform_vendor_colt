@@ -114,9 +114,9 @@ PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/etc/init.local.rc:root/init.aosp.rc
 
 # Bring in camera effects
-PRODUCT_COPY_FILES +=  \
-    vendor/colt/prebuilt/common/media/LMspeed_508.emd:system/media/LMspeed_508.emd \
-    vendor/colt/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+#PRODUCT_COPY_FILES +=  \
+ #   vendor/colt/prebuilt/common/media/LMspeed_508.emd:system/media/LMspeed_508.emd \
+  #  vendor/colt/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \

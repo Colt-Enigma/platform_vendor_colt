@@ -1,2 +1,2 @@
 # Bring in Mediatek helper macros
-include vendor/aosp/build/core/mtk_utils.mk
+include vendor/colt/build/core/mtk_utils.mk
