@@ -65,6 +65,7 @@ PRODUCT_PACKAGES += \
     TelecommTheme
 
 PRODUCT_PACKAGES += \
+    NotificationsBlack \
     NotificationsDark \
     NotificationsLight \
     NotificationsPrimary
