@@ -57,6 +57,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     OmniStyle
 
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStileCircleTrim \
+    QStileDefault \
+    QStileDualToneCircle \
+    QStileSquircleTrim
+
 # Omni Poor Man Themes
 PRODUCT_PACKAGES += \
     DocumentsUITheme \
