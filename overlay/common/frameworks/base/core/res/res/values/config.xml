@@ -141,5 +141,8 @@
     <string-array name="config_fontPackages" translatable="false">
 	<item>com.dirtyunicorns.fonts</item>
     </string-array>
+
+    <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
+    <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
 </resources>
 
