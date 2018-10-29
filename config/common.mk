@@ -57,6 +57,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     OmniStyle
 
+# Weather
+ PRODUCT_COPY_FILES +=  \
+     vendor/colt/prebuilt/common/etc/sysconfig/org.pixelexperience.weather.client.xml:system/etc/sysconfig/org.pixelexperience.weather.client.xml \
+     vendor/colt/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
+
+ PRODUCT_PROPERTY_OVERRIDES += \
+     org.pixelexperience.weather.revision=2
+
+ PRODUCT_PACKAGES += \
+     WeatherClient
+
 # QS tile styles
 PRODUCT_PACKAGES += \
     QStileCircleTrim \
@@ -105,7 +116,7 @@ PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
     PrimaryBlack \
     PrimaryEnigma \
-	PrimaryColtBlue \
+    PrimaryColtBlue \
     PrimaryOmni \
     PrimaryWhite \
     PrimaryColdWhite \
