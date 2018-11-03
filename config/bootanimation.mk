@@ -1,4 +1,4 @@
-# Copyright (C) 2017 AospExtended ROM
+# Copyright (C) 2018 The ColtOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,14 +16,20 @@
 
 TARGET_BOOT_ANIMATION_RES ?= undefined
 
-ifeq ($(TARGET_BOOT_ANIMATION_RES),480)
-     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/AEX-480.zip:system/media/bootanimation.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),540)
-     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/AEX-540.zip:system/media/bootanimation.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
-     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/AEX-720.zip:system/media/bootanimation.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
-     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/AEX-1080.zip:system/media/bootanimation.zip
+ifeq ($(TARGET_BOOT_ANIMATION_RES),720x1280)
+     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/720x1280.zip:system/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),768x1280)
+     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/768x1280.zip:system/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080x1920)
+     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/1080x1920.zip:system/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080x2160)
+     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/1080x2160.zip:system/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080x2280)
+     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/1080x2280.zip:system/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440x2560)
+     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/1440x2560.zip:system/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440x2880)
+     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/1080x2160.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),undefined)
      $(warning Target bootanimation res is undefined, using generic bootanimation )
      PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
