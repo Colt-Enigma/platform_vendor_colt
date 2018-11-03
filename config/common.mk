@@ -74,6 +74,7 @@ PRODUCT_PACKAGES += \
     NotificationsBlack \
     NotificationsDark \
     NotificationsEnigma \
+    NotificationsColtBlue \
     NotificationsLight \
     NotificationsPrimary
 
@@ -97,6 +98,7 @@ PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
     PrimaryBlack \
     PrimaryEnigma \
+	PrimaryColtBlue \
     PrimaryOmni \
     PrimaryWhite \
     PrimaryColdWhite \
