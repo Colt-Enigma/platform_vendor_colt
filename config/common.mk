@@ -96,6 +96,14 @@ PRODUCT_PACKAGES += \
     DialerTheme \
     TelecommTheme
 
+# QS header styles
+PRODUCT_PACKAGES += \
+    QSHeaderBlack \
+    QSHeaderGrey \
+    QSHeaderLightGrey \
+    QSHeaderAccent \
+    QSHeaderTransparent
+
 PRODUCT_PACKAGES += \
     NotificationsBlack \
     NotificationsDark \
