@@ -57,6 +57,15 @@ PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
     vendor/colt/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 
+# JamesDSP
+PRODUCT_PACKAGES += \
+   libjamesdsp
+
+# MusicFX
+PRODUCT_PACKAGES += \
+    Eleven \
+    MusicFX
+
 # Colt Packages
 PRODUCT_PACKAGES += \
     OmniStyle
