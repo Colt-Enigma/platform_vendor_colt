@@ -136,4 +136,10 @@
 
     <!-- If this is true, long press on power button will be available from the non-interactive state -->
     <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
+
+    <!-- Fonts -->
+    <string-array name="config_fontPackages" translatable="false">
+	<item>com.dirtyunicorns.fonts</item>
+    </string-array>
 </resources>
+

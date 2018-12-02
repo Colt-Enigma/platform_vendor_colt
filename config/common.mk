@@ -48,6 +48,10 @@ PRODUCT_PACKAGES += \
     MarkupGoogle \
     WellbeingPrebuilt
 
+# Fonts
+PRODUCT_PACKAGES += \
+    Fonts
+
 # Markup libs
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
