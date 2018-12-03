@@ -44,3 +44,7 @@ else
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.device.cache_dir=/cache
 endif
+
+#Colt Wallpapers
+  PRODUCT_PACKAGES += \
+     ColtPapers
