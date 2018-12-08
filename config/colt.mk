@@ -48,3 +48,8 @@ endif
 #Colt Wallpapers
   PRODUCT_PACKAGES += \
      ColtPapers
+
+#Build Simple Gallery
+  PRODUCT_PACKAGES += \
+     Simple-Gallery
+
