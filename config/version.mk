@@ -46,5 +46,6 @@ COLT_DISPLAY_VERSION := ColtOS-$(VERSION)-$(COLT_BUILDTYPE)
 COLT_FINGERPRINT := ColtOS-$(VERSION)-$(COLT_BUILDTYPE)-$(shell date -u +%Y%m%d)
 
 PRODUCT_GENERIC_PROPERTIES += \
+  ro.colt.extra.version=$(COLT_TAG)-$(VERSION)-$(COLT_BUILDTYPE) \
   ro.colt.display.version=$(COLT_DISPLAY_VERSION) \
   ro.colt.fingerprint=$(COLT_FINGERPRINT)
