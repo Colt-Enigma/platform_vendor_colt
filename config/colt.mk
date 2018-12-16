@@ -51,5 +51,6 @@ endif
 
 #Build Simple Gallery
   PRODUCT_PACKAGES += \
+     Recorder \
      Simple-Gallery
 
