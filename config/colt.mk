@@ -54,3 +54,5 @@ endif
      Recorder \
      Simple-Gallery
 
+# ColtOS OTA
+$(call inherit-product-if-exists, vendor/colt/config/ota.mk)
