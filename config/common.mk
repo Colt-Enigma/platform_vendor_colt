@@ -114,6 +114,7 @@ PRODUCT_PACKAGES += \
 # Omni's PoorMan Themes
 PRODUCT_PACKAGES += \
     DocumentsUITheme \
+    ContactsTheme \
     MessagesTheme \
     DialerTheme \
     TelecommTheme
