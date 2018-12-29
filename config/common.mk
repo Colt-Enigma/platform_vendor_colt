@@ -212,6 +212,12 @@ PRODUCT_PACKAGES += \
     PrimaryTealMeal \
     PrimaryColtChocko
 
+# Switch themes
+PRODUCT_PACKAGES += \
+    MD2Switch \
+    OnePlusSwitch \
+    StockSwitch
+
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
