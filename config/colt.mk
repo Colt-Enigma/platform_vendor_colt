@@ -50,6 +50,11 @@ endif
   PRODUCT_PACKAGES += \
      ColtPapers
 
+# Cutout control overlays
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock
+
 #Build Simple Gallery
   PRODUCT_PACKAGES += \
      Recorder \
