@@ -31,15 +31,15 @@ ifndef COLT_BUILDTYPE
 endif
 
 ifeq ($(COLT_BUILDTYPE), OFFICIAL)
-    COLT_VERSION := ColtOS-$(COLT_TAG)-$(VERSION)_$(COLT_BUILDTYPE)-$(shell date -u +%Y%m%d)-$(COLT_BUILD)
+    COLT_VERSION := ColtOS-$(COLT_TAG)-$(VERSION)_$(COLT_BUILDTYPE)-$(shell date -u +%Y%m%d)
 
 else ifeq ($(COLT_BUILDTYPE), EXPERIMENTAL)
-    COLT_VERSION := ColtOS-$(COLT_TAG)-$(VERSION)_$(COLT_BUILDTYPE)-$(shell date -u +%Y%m%d)-$(COLT_BUILD) 
+    COLT_VERSION := ColtOS-$(COLT_TAG)-$(VERSION)_$(COLT_BUILDTYPE)-$(shell date -u +%Y%m%d) 
 
 else
     # If COLT_BUILDTYPE is not defined, set to UNOFFICIAL
     COLT_BUILDTYPE := UNOFFICIAL
-    COLT_VERSION := ColtOS-$(COLT_TAG)-$(VERSION)_$(COLT_BUILDTYPE)-$(shell date -u +%Y%m%d)-$(COLT_BUILD)
+    COLT_VERSION := ColtOS-$(COLT_TAG)-$(VERSION)_$(COLT_BUILDTYPE)-$(shell date -u +%Y%m%d)
 endif
 
 COLT_DISPLAY_VERSION := ColtOS-$(VERSION)-$(COLT_BUILDTYPE)
