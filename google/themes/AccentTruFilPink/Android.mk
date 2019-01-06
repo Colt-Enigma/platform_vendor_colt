@@ -2,7 +2,7 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_PACKAGE_NAME := AccentTruFilPink
-LOCAL_RRO_THEME := AccentSluttyPink
+LOCAL_RRO_THEME := AccentTruFilPink
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_SDK_VERSION := current

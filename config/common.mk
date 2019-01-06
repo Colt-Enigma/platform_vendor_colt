@@ -155,12 +155,12 @@ PRODUCT_PACKAGES += \
     AccentHeirloomBleu \
     AccentTruFilPink \
     AccentWarmthOrange \
-    AccentColdBleu \
+    AccentColdEveningBleu \
     AccentDiffDayGreen \
     AccentDuskPurple \
     AccentBurningRed \
     AccentHazedPink \
-    AccentColdYellow \
+    AccentColdSummerYellow \
     AccentNewHouseOrange \
     AccentIllusionsPurple
 
