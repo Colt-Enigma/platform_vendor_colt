@@ -90,6 +90,7 @@ PRODUCT_COPY_FILES += \
 
 # Colt packages
 PRODUCT_PACKAGES += \
+    CustomDoze \
     GalleryGoPrebuilt \
     MarkupGoogle \
     SoundPickerPrebuilt \
