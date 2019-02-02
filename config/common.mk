@@ -95,7 +95,8 @@ PRODUCT_PACKAGES += \
     SoundPickerPrebuilt \
     ThemePicker \
     PixelThemes \
-    FontGoogleSansOverlay
+    FontGoogleSansOverlay \
+    OmniStyle
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
