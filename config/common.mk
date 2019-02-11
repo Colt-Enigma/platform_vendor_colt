@@ -48,7 +48,7 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
 PRODUCT_PACKAGES += \
     Terminal \
-    LatinIME \
+    GboardGoPreb \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
@@ -297,6 +297,11 @@ PRODUCT_COPY_FILES += \
 # Media
 PRODUCT_GENERIC_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
+
+# Some props that we need for the google stuff we're adding
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.com.google.ime.height_ratio=1.05 \
+    ro.com.google.ime.emoji_key=false
 
 # Needed by some RILs and for some gApps packages
 PRODUCT_PACKAGES += \
