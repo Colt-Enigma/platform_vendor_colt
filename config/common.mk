@@ -82,7 +82,8 @@ PRODUCT_PACKAGES += \
 # Weather
  PRODUCT_COPY_FILES +=  \
      vendor/colt/prebuilt/common/etc/sysconfig/org.pixelexperience.weather.client.xml:system/etc/sysconfig/org.pixelexperience.weather.client.xml \
-     vendor/colt/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
+     vendor/colt/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml \
+     vendor/colt/prebuilt/common/etc/permissions/privapp-permissions-colt.xml:system/etc/permissions/privapp-permissions-colt.xml
 
  PRODUCT_PROPERTY_OVERRIDES += \
      org.pixelexperience.weather.revision=2
