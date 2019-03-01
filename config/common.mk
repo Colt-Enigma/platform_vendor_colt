@@ -179,7 +179,14 @@ PRODUCT_PACKAGES += \
     AccentHazedPink \
     AccentColdSummerYellow \
     AccentNewHouseOrange \
-    AccentIllusionsPurple
+    AccentIllusionsPurple \
+    AccentFlare \
+    AccentSublime \
+    AccentSincityRed \
+    AccentOrangeCoral \
+    AccentPureLust \
+    AccentQuepal \
+    AccentShadesOfGrey
 
 PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
