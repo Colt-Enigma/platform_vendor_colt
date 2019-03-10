@@ -49,6 +49,10 @@ endif
   PRODUCT_PACKAGES += \
      ColtPapers
 
+#Colt With OmniClock
+  PRODUCT_PACKAGES += \
+     OmniClockOSS
+
 #Build Simple Gallery
   PRODUCT_PACKAGES += \
      Recorder \
