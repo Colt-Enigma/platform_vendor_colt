@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Fonts
 
+# CustomDoze
+PRODUCT_PACKAGES += \
+    CustomDoze
+
 # Markup libs
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
