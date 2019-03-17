@@ -209,7 +209,8 @@ PRODUCT_PACKAGES += \
     PrimaryWarmWhite \
     PrimaryDarkBlue \
     PrimaryViolator \
-    PrimaryTealMeal
+    PrimaryTealMeal \
+    PrimaryColtChocko
 
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
