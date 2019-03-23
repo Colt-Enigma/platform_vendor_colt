@@ -267,6 +267,10 @@ PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/fonts/gobold/GoboldThinLight-Italic.ttf:system/fonts/GoboldThinLight-Italic.ttf \
     vendor/colt/prebuilt/fonts/roadrage/road_rage.ttf:system/fonts/RoadRage-Regular.ttf \
     vendor/colt/prebuilt/fonts/neoneon/neoneon.ttf:system/fonts/Neoneon-Regular.ttf \
+    vendor/colt/prebuilt/fonts/mexcellent/mexcellent.ttf:system/fonts/Mexcellent-Regular.ttf \
+    vendor/colt/prebuilt/fonts/burnstown/burnstown.ttf:system/fonts/Burnstown-Regular.ttf \
+    vendor/colt/prebuilt/fonts/dumbledor/dumbledor.ttf:system/fonts/Dumbledor-Regular.ttf \
+    vendor/colt/prebuilt/fonts/PhantomBold/PhantomBold.ttf:system/fonts/PhantomBold-Regular.ttf \
     vendor/colt/prebuilt/fonts/snowstorm/snowstorm.ttf:system/fonts/Snowstorm-Regular.ttf \
     vendor/colt/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:system/fonts/ThemeableFont-Regular.ttf \
     vendor/colt/prebuilt/fonts/Shamshung/Shamshung.ttf:system/fonts/Shamshung.ttf
