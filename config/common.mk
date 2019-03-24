@@ -203,6 +203,7 @@ PRODUCT_PACKAGES += \
     PrimaryBlack \
     PrimaryEnigma \
     PrimaryColtBlue \
+    PrimaryColtTrans \
     PrimaryOmni \
     PrimaryWhite \
     PrimaryColdWhite \
