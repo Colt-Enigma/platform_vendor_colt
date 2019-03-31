@@ -22,6 +22,7 @@ PRODUCT_GENERIC_PROPERTIES += \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
     ro.setupwizard.rotation_locked=true \
     ro.opa.eligible_device=true\
+    net.tethering.noprovisioning=true \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0 \
     ro.build.selinux=0 \
