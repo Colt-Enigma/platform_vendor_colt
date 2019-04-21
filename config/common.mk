@@ -211,6 +211,7 @@ PRODUCT_PACKAGES += \
     PrimaryDarkBlue \
     PrimaryViolator \
     PrimaryTealMeal \
+    PrimaryRocky \
     PrimaryColtChocko
 
 # Switch themes
