@@ -55,5 +55,5 @@ endif
      Recorder \
 
 # ColtOS OTA
-$(call inherit-product-if-exists, vendor/colt/configs/ota.mk)
+$(call inherit-product-if-exists, vendor/colt/config/ota.mk)
 
