@@ -130,7 +130,8 @@ PRODUCT_PACKAGES += \
     QStileHexagon \
     QStileStar \
     QStileSquare \
-    QStileBadge
+    QStileGear \
+    QStileSun
 
 # Omni's PoorMan Themes
 PRODUCT_PACKAGES += \
