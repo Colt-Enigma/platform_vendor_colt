@@ -126,7 +126,11 @@ PRODUCT_PACKAGES += \
     QStileTeardrop \
     QStileOreoCircleTrim \
     QStileOreoSquircleTrim \
-    QStilesCircleOutline 
+    QStilesCircleOutline \
+    QStileHexagon \
+    QStileStar \
+    QStileSquare \
+    QStileBadge
 
 # Omni's PoorMan Themes
 PRODUCT_PACKAGES += \
