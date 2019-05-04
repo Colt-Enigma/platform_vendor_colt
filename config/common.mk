@@ -89,6 +89,10 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     Lawnchair
 
+# Live Display
+PRODUCT_COPY_FILES += \
+    vendor/colt/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml
+
 # Weather
  PRODUCT_COPY_FILES +=  \
      vendor/colt/prebuilt/common/etc/sysconfig/org.pixelexperience.weather.client.xml:system/etc/sysconfig/org.pixelexperience.weather.client.xml \
