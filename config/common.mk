@@ -303,7 +303,11 @@ PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
-# AEX-specific init file
+# Vendor specific init files
+$(foreach f,$(wildcard vendor/colt/prebuilt/common/etc/init/*.rc),\
+    $(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
+
+# init file
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/etc/init.local.rc:root/init.aosp.rc
 
