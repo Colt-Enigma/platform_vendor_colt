@@ -210,7 +210,8 @@ PRODUCT_PACKAGES += \
     AccentQuepal \
     AccentShadesOfGrey \
     AccentSweetQPurple \
-    AccentQGreen
+    AccentQGreen \
+    AccentElegantGreen
 
 PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
