@@ -227,7 +227,8 @@ PRODUCT_PACKAGES += \
     PrimaryViolator \
     PrimaryTealMeal \
     PrimaryRocky \
-    PrimaryColtChocko
+    PrimaryColtChocko \
+    PrimaryBlueBlack
 
 # Switch themes
 PRODUCT_PACKAGES += \
