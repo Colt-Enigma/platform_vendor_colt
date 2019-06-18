@@ -13,6 +13,7 @@
 # limitations under the License.
 
 PRODUCT_COPY_FILES += \
+
 	vendor/colt/sounds/alarms/A_real_hoot.ogg:system/media/audio/alarms/A_real_hoot.ogg \
 	vendor/colt/sounds/alarms/Argon.ogg:system/media/audio/alarms/Argon.ogg \
 	vendor/colt/sounds/alarms/Awaken.ogg:system/media/audio/alarms/Awaken.ogg \
@@ -66,75 +67,45 @@ PRODUCT_COPY_FILES += \
 	vendor/colt/sounds/ui/VideoRecord.ogg:system/media/audio/ui/VideoRecord.ogg \
 	vendor/colt/sounds/ui/VideoStop.ogg:system/media/audio/ui/VideoStop.ogg \
 	vendor/colt/sounds/ui/WirelessChargingStarted.ogg:system/media/audio/ui/WirelessChargingStarted.ogg \
+	vendor/colt/sounds/notifications/Angrybirds.ogg:system/media/audio/notifications/Angrybirds.ogg \
+	vendor/colt/sounds/notifications/Are_you_kidding.ogg:system/media/audio/notifications/Are_you_kidding.ogg \
 	vendor/colt/sounds/notifications/Ariel.ogg:system/media/audio/notifications/Ariel.ogg \
-	vendor/colt/sounds/notifications/Beginning.ogg:system/media/audio/notifications/Beginning.ogg \
-	vendor/colt/sounds/notifications/Birdsong.ogg:system/media/audio/notifications/Birdsong.ogg \
 	vendor/colt/sounds/notifications/Carme.ogg:system/media/audio/notifications/Carme.ogg \
 	vendor/colt/sounds/notifications/Ceres.ogg:system/media/audio/notifications/Ceres.ogg \
 	vendor/colt/sounds/notifications/Chime.ogg:system/media/audio/notifications/Chime.ogg \
-	vendor/colt/sounds/notifications/Clink.ogg:system/media/audio/notifications/Clink.ogg \
-	vendor/colt/sounds/notifications/Coconuts.ogg:system/media/audio/notifications/Coconuts.ogg \
 	vendor/colt/sounds/notifications/Duet.ogg:system/media/audio/notifications/Duet.ogg \
-	vendor/colt/sounds/notifications/Elara.ogg:system/media/audio/notifications/Elara.ogg \
-	vendor/colt/sounds/notifications/End_note.ogg:system/media/audio/notifications/End_note.ogg \
-	vendor/colt/sounds/notifications/Europa.ogg:system/media/audio/notifications/Europa.ogg \
-	vendor/colt/sounds/notifications/Flick.ogg:system/media/audio/notifications/Flick.ogg \
 	vendor/colt/sounds/notifications/Gentle_gong.ogg:system/media/audio/notifications/Gentle_gong.ogg \
 	vendor/colt/sounds/notifications/Hey.ogg:system/media/audio/notifications/Hey.ogg \
 	vendor/colt/sounds/notifications/Iapetus.ogg:system/media/audio/notifications/Iapetus.ogg \
+	vendor/colt/sounds/notifications/Incoming.ogg:system/media/audio/notifications/Incoming.ogg \
 	vendor/colt/sounds/notifications/Io.ogg:system/media/audio/notifications/Io.ogg \
 	vendor/colt/sounds/notifications/Mallet.ogg:system/media/audio/notifications/Mallet.ogg \
+	vendor/colt/sounds/notifications/Messagetone.ogg:system/media/audio/notifications/Messagetone.ogg \
 	vendor/colt/sounds/notifications/Note.ogg:system/media/audio/notifications/Note.ogg \
-	vendor/colt/sounds/notifications/Orders_up.ogg:system/media/audio/notifications/Orders_up.ogg \
+	vendor/colt/sounds/notifications/Pikachu.ogg:system/media/audio/notifications/Pikachu.ogg \
 	vendor/colt/sounds/notifications/Ping.ogg:system/media/audio/notifications/Ping.ogg \
-	vendor/colt/sounds/notifications/Pipes.ogg:system/media/audio/notifications/Pipes.ogg \
-	vendor/colt/sounds/notifications/Popcorn.ogg:system/media/audio/notifications/Popcorn.ogg \
 	vendor/colt/sounds/notifications/Rhea.ogg:system/media/audio/notifications/Rhea.ogg \
-	vendor/colt/sounds/notifications/Salacia.ogg:system/media/audio/notifications/Salacia.ogg \
-	vendor/colt/sounds/notifications/Shopkeeper.ogg:system/media/audio/notifications/Shopkeeper.ogg \
-	vendor/colt/sounds/notifications/Sticks_and_stones.ogg:system/media/audio/notifications/Sticks_and_stones.ogg \
-	vendor/colt/sounds/notifications/Strum.ogg:system/media/audio/notifications/Strum.ogg \
-	vendor/colt/sounds/notifications/Tethys.ogg:system/media/audio/notifications/Tethys.ogg \
+	vendor/colt/sounds/notifications/Spinner.ogg:system/media/audio/notifications/Spinner.ogg \
+	vendor/colt/sounds/notifications/Spirit.ogg:system/media/audio/notifications/Spirit.ogg \
 	vendor/colt/sounds/notifications/Titan.ogg:system/media/audio/notifications/Titan.ogg \
 	vendor/colt/sounds/notifications/Trill.ogg:system/media/audio/notifications/Trill.ogg \
 	vendor/colt/sounds/notifications/Tuneup.ogg:system/media/audio/notifications/Tuneup.ogg \
-	vendor/colt/sounds/notifications/Tweeter.ogg:system/media/audio/notifications/Tweeter.ogg \
-	vendor/colt/sounds/notifications/Twinkle.ogg:system/media/audio/notifications/Twinkle.ogg \
-	vendor/colt/sounds/ringtones/Atria.ogg:system/media/audio/ringtones/Atria.ogg \
-	vendor/colt/sounds/ringtones/Beats.ogg:system/media/audio/ringtones/Beats.ogg \
-	vendor/colt/sounds/ringtones/Callisto.ogg:system/media/audio/ringtones/Callisto.ogg \
-	vendor/colt/sounds/ringtones/Copycat.ogg:system/media/audio/ringtones/Copycat.ogg \
-	vendor/colt/sounds/ringtones/Crackle.ogg:system/media/audio/ringtones/Crackle.ogg \
-	vendor/colt/sounds/ringtones/Dance_party.ogg:system/media/audio/ringtones/Dance_party.ogg \
+	vendor/colt/sounds/notifications/Tuturu.ogg:system/media/audio/notifications/Tuturu.ogg \
 	vendor/colt/sounds/ringtones/Dione.ogg:system/media/audio/ringtones/Dione.ogg \
-	vendor/colt/sounds/ringtones/Early_bird.ogg:system/media/audio/ringtones/Early_bird.ogg \
-	vendor/colt/sounds/ringtones/Flutterby.ogg:system/media/audio/ringtones/Flutterby.ogg \
-	vendor/colt/sounds/ringtones/Ganymede.ogg:system/media/audio/ringtones/Ganymede.ogg \
-	vendor/colt/sounds/ringtones/Hey_hey.ogg:system/media/audio/ringtones/Hey_hey.ogg \
+	vendor/colt/sounds/ringtones/Faded_Remix.ogg:system/media/audio/ringtones/Faded_Remix.ogg \
+	vendor/colt/sounds/ringtones/Havana_Remix.ogg:system/media/audio/ringtones/Havana_Remix.ogg \
 	vendor/colt/sounds/ringtones/Hotline.ogg:system/media/audio/ringtones/Hotline.ogg \
-	vendor/colt/sounds/ringtones/Leaps_and_bounds.ogg:system/media/audio/ringtones/Leaps_and_bounds.ogg \
 	vendor/colt/sounds/ringtones/Lollipop.ogg:system/media/audio/ringtones/Lollipop.ogg \
-	vendor/colt/sounds/ringtones/Lost_and_found.ogg:system/media/audio/ringtones/Lost_and_found.ogg \
-	vendor/colt/sounds/ringtones/Luna.ogg:system/media/audio/ringtones/Luna.ogg \
-	vendor/colt/sounds/ringtones/Mash_up.ogg:system/media/audio/ringtones/Mash_up.ogg \
-	vendor/colt/sounds/ringtones/Monkey_around.ogg:system/media/audio/ringtones/Monkey_around.ogg \
-	vendor/colt/sounds/ringtones/Oberon.ogg:system/media/audio/ringtones/Oberon.ogg \
-	vendor/colt/sounds/ringtones/Phobos.ogg:system/media/audio/ringtones/Phobos.ogg \
+	vendor/colt/sounds/ringtones/on_my_way.ogg:system/media/audio/ringtones/on_my_way.ogg \
+	vendor/colt/sounds/ringtones/xiaomi.ogg:system/media/audio/ringtones/xiaomi.ogg \
 	vendor/colt/sounds/ringtones/Pyxis.ogg:system/media/audio/ringtones/Pyxis.ogg \
-	vendor/colt/sounds/ringtones/Rrrring.ogg:system/media/audio/ringtones/Rrrring.ogg \
-	vendor/colt/sounds/ringtones/Sedna.ogg:system/media/audio/ringtones/Sedna.ogg \
-	vendor/colt/sounds/ringtones/Schools_out.ogg:system/media/audio/ringtones/Schools_out.ogg \
-	vendor/colt/sounds/ringtones/Shooting_star.ogg:system/media/audio/ringtones/Shooting_star.ogg \
-	vendor/colt/sounds/ringtones/Spaceship.ogg:system/media/audio/ringtones/Spaceship.ogg \
-	vendor/colt/sounds/ringtones/Summer_night.ogg:system/media/audio/ringtones/Summer_night.ogg \
-	vendor/colt/sounds/ringtones/The_big_adventure.ogg:system/media/audio/ringtones/The_big_adventure.ogg \
-	vendor/colt/sounds/ringtones/Titania.ogg:system/media/audio/ringtones/Titania.ogg \
-	vendor/colt/sounds/ringtones/Triton.ogg:system/media/audio/ringtones/Triton.ogg \
-	vendor/colt/sounds/ringtones/Umbriel.ogg:system/media/audio/ringtones/Umbriel.ogg \
+	vendor/colt/sounds/ringtones/Shape_of_you.ogg:system/media/audio/ringtones/Shape_of_you.ogg \
 	vendor/colt/sounds/ringtones/Zen.ogg:system/media/audio/ringtones/Zen.ogg \
+	vendor/colt/sounds/ringtones/Soulful.ogg:system/media/audio/ringtones/Soulful.ogg \
+	vendor/colt/sounds/ringtones/galaxy.ogg:system/media/audio/ringtones/galaxy.ogg \
 	vendor/colt/sounds/ringtones/Zen_too.ogg:system/media/audio/ringtones/Zen_too.ogg
 
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.config.ringtone=Phobos.ogg \
-   ro.config.notification_sound=Rhea.ogg \
+   ro.config.ringtone=Soulful.ogg,galaxy.ogg \
+   ro.config.notification_sound=Note.ogg \
    ro.config.alarm_alert=Timer.ogg
