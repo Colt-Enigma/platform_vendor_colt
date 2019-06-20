@@ -379,6 +379,12 @@ PRODUCT_PACKAGES += \
 # Sounds
 include vendor/colt/config/sounds.mk
 
+# Default ringtone/notification/alarm sounds
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.config.ringtone=Soulful.ogg,galaxy.ogg \
+    ro.config.notification_sound=Pikachu.ogg \
+    ro.config.alarm_alert=Helium.ogg
+
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
 

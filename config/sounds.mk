@@ -13,7 +13,6 @@
 # limitations under the License.
 
 PRODUCT_COPY_FILES += \
-
 	vendor/colt/sounds/alarms/A_real_hoot.ogg:system/media/audio/alarms/A_real_hoot.ogg \
 	vendor/colt/sounds/alarms/Argon.ogg:system/media/audio/alarms/Argon.ogg \
 	vendor/colt/sounds/alarms/Awaken.ogg:system/media/audio/alarms/Awaken.ogg \
@@ -105,7 +104,3 @@ PRODUCT_COPY_FILES += \
 	vendor/colt/sounds/ringtones/galaxy.ogg:system/media/audio/ringtones/galaxy.ogg \
 	vendor/colt/sounds/ringtones/Zen_too.ogg:system/media/audio/ringtones/Zen_too.ogg
 
-PRODUCT_PROPERTY_OVERRIDES += \
-   ro.config.ringtone=Soulful.ogg,galaxy.ogg \
-   ro.config.notification_sound=Note.ogg \
-   ro.config.alarm_alert=Timer.ogg
