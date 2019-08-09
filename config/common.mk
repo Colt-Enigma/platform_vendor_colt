@@ -243,16 +243,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MD2Switch \
     OnePlusSwitch \
-    StockSwitch \
-    SwitchOne \
-    SwitchTwo \
-    SwitchThree \
-    SwitchFour \
-    SwitchFive \
-    SwitchSix \
-    SwitchSeven \
-    SwitchEight \
-    SwitchNine
+    StockSwitch
 
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
