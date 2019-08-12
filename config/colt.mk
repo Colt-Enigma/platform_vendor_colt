@@ -62,3 +62,6 @@ PRODUCT_PACKAGES += \
 # ColtOS OTA
 $(call inherit-product-if-exists, vendor/colt/config/ota.mk)
 
+# Long screenshot
+PRODUCT_PACKAGES += \
+    Longshot
