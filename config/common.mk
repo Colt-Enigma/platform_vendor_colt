@@ -113,6 +113,7 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     Snap \
     Lawnchair \
+    Longshot \
     WallpaperPicker2 \
     SafetyHubPrebuilt
 
@@ -124,6 +125,10 @@ PRODUCT_COPY_FILES += \
 # Power whitelist
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/colt-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/colt-power-whitelist.xml
+
+# Hidden api whitelisted apps
+PRODUCT_COPY_FILES += \
+    vendor/colt/prebuilt/common/etc/sysconfig/colt-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/colt-hiddenapi-package-whitelist.xml
 
 # Include AOSP audio files
 include vendor/colt/config/aosp_audio.mk
