@@ -31,7 +31,9 @@ PRODUCT_GENERIC_PROPERTIES += \
     ro.substratum.verified=true \
     persist.sys.recovery_update=false \
     ro.com.google.ime.theme_id=5 \
-    persist.sys.disable_rescue=true
+    persist.sys.disable_rescue=true \
+    ro.boot.vendor.overlay.theme=org.omnirom.theme.accent.spookedpurple;org.omnirom.theme.primary.almostblack;org.omnirom.theme.notification.primary;org.omnirom.theme.app.dialertheme;org.omnirom.theme.app.messagestheme
+
 
 # Disable HDCP check
 PRODUCT_PROPERTY_OVERRIDES += \
