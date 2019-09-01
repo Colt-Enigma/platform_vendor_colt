@@ -220,7 +220,27 @@ PRODUCT_PACKAGES += \
     AccentShadesOfGrey \
     AccentSweetQPurple \
     AccentQGreen \
-    AccentElegantGreen
+    AccentElegantGreen \
+    AccentAndroidOneGreen \
+    AccentAospaGreen \
+    AccentCocaColaRed \
+    AccentDiscordPurple \
+    AccentFacebookBlue \
+    AccentInstagramCerise \
+    AccentJollibeeCrimson \
+    AccentMonsterEnergyGreen \
+    AccentNextbitMint \
+    AccentOneplusRed \
+    AccentPepsiBlue \
+    AccentPocophoneYellow \
+    AccentXiaomiOrange \
+    AccentXboxGreen \
+    AccentTwitterBlue \
+    AccentTwitchPurple \
+    AccentStarbucksGreen \
+    AccentSpotifyGreen \
+    AccentSamsungBlue \
+    AccentRazerGreen
 
 PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
