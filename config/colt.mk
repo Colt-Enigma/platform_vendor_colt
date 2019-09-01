@@ -61,6 +61,12 @@ PRODUCT_PACKAGES += \
   PRODUCT_PACKAGES += \
      Recorder \
 
+# Some more permissions
+PRODUCT_COPY_FILES += \
+    vendor/colt/prebuilt/common/etc/permissions/privapp-permissions-recorder.xml:system/etc/permissions/privapp-permissions-recorder.xml \
+    vendor/colt/prebuilt/common/etc/permissions/org.pixelexperience.recorder.xml:system/etc/permissions/org.pixelexperience.recorder.xml
+
+
 # ColtOS OTA
 $(call inherit-product-if-exists, vendor/colt/config/ota.mk)
 
