@@ -112,7 +112,8 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     Snap \
     Lawnchair \
-    WallpaperPicker2
+    WallpaperPicker2 \
+    SafetyHubPrebuilt
 
 # Lawnchair
 PRODUCT_COPY_FILES += \
@@ -171,7 +172,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     org.colt.fingerprint=$(PLATFORM_VERSION)-$(BUILD_ID)-$(COLT_BUILD_DATE)
-
 
 # AOSP packages
 PRODUCT_PACKAGES += \
