@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifneq ($(filter colt_oneplus3 colt_santoni colt_dumpling colt_cheeseburger colt_taimen colt_potter colt_X00TD,$(TARGET_PRODUCT)),)
+ifneq ($(filter colt_oneplus3 colt_santoni colt_dumpling colt_cheeseburger colt_taimen colt_shamu colt_potter colt_X00TD,$(TARGET_PRODUCT)),)
 
 PRODUCT_PACKAGES += \
     Updates
