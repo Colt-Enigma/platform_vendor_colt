@@ -1,4 +1,10 @@
-# COLTOS System Version
+# Build fingerprint
+ifneq ($(BUILD_FINGERPRINT),)
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+endif
+
+# ColtOS System Version
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.colt.build.date=$(COLT_BUILD_DATE) \
     ro.colt.build.version=$(COLT_BUILD_VERSION) \
