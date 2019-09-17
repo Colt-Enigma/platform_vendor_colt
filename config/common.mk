@@ -56,6 +56,11 @@ $(foreach f,$(wildcard vendor/colt/prebuilt/common/etc/init/*.rc),\
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/lib/content-types.properties:$(TARGET_COPY_OUT_SYSTEM)/lib/content-types.properties
 
+# Markup libs
+PRODUCT_COPY_FILES += \
+    vendor/colt/prebuilt/google/lib/libsketchology_native.so:system/product/lib/libsketchology_native.so \
+    vendor/colt/prebuilt/google/lib64/libsketchology_native.so:system/product/lib64/libsketchology_native.so
+
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
@@ -78,7 +83,9 @@ PRODUCT_COPY_FILES += \
 
 # Colt packages
 PRODUCT_PACKAGES += \ 
-    GalleryGoPrebuilt
+    GalleryGoPrebuilt \
+    MarkupGoogle \
+    SoundPickerPrebuilt
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
