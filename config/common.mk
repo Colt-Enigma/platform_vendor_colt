@@ -247,3 +247,6 @@ PRODUCT_COPY_FILES += \
 
 -include vendor/colt/config/partner_gms.mk
 -include vendor/colt/config/version.mk
+
+# Enable ccache
+USE_CCACHE := true
