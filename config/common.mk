@@ -31,7 +31,8 @@ PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/colt/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/colt/prebuilt/common/bin/50-colt.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-colt.sh \
-    vendor/colt/prebuilt/common/bin/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist
+    vendor/colt/prebuilt/common/bin/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist \
+    vendor/colt/prebuilt/common/bin/system-mount.sh:install/bin/system-mount.sh
 
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_COPY_FILES += \
