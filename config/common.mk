@@ -76,6 +76,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/colt-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/colt-hiddenapi-package-whitelist.xml
 
+# Colt packages
+PRODUCT_PACKAGES += \ 
+    GalleryGoPrebuilt
+
 # Power whitelist
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/colt-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/colt-power-whitelist.xml
@@ -195,4 +199,3 @@ DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
 -include vendor/colt/config/partner_gms.mk
 -include vendor/colt/config/version.mk
-
