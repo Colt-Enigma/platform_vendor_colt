@@ -211,5 +211,10 @@ PRODUCT_PACKAGES += \
     AccentColorCyanOverlay \
     AccentColorBlueGrayOverlay
 
+#OmniJaws
+PRODUCT_PACKAGES += \
+    OmniJaws \
+    WeatherIcons
+
 -include vendor/colt/config/partner_gms.mk
 -include vendor/colt/config/version.mk
