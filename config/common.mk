@@ -208,6 +208,11 @@ endif
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
+#Speed tuning
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
+    SystemUI
+
 # Accents
 PRODUCT_PACKAGES += \
     AccentColorYellowOverlay \
