@@ -87,7 +87,8 @@ PRODUCT_PACKAGES += \
     GalleryGoPrebuilt \
     MarkupGoogle \
     SoundPickerPrebuilt \
-    ThemePicker
+    ThemePicker \
+    PixelThemes
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
