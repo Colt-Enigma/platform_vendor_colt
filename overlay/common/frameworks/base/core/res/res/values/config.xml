@@ -106,20 +106,6 @@
     <!-- Colon separated list of package names that should be granted DND access -->
     <string name="config_defaultDndAccessPackages" translatable="false">com.google.android.gms:com.google.android.GoogleCamera:com.google.intelligence.sense:com.google.android.settings.intelligence</string>
 
-    <!-- An array of packages for which notifications cannot be blocked.
-         Should only be used for core device functionality that must not be
-         rendered inoperative for safety reasons, like the phone dialer and
-         SMS handler. -->
-    <string-array translatable="false" name="config_nonBlockableNotificationPackages">
-        <item>com.android.dialer</item>
-        <item>com.android.messaging</item>
-        <item>com.google.android.dialer</item>
-        <item>com.google.android.dialer:phone_incoming_call</item>
-        <item>com.google.android.deskclock:Firing</item>
-        <item>com.google.android.setupwizard</item>
-        <item>com.google.android.apps.pixelmigrate</item>
-    </string-array>
-
     <!-- Colon separated list of package names that should be granted Notification Listener access -->
     <string name="config_defaultListenerAccessPackages" translatable="false">com.google.android.apps.nexuslauncher:com.google.android.setupwizard:com.google.android.apps.pixelmigrate:com.google.android.as</string>
 
@@ -179,7 +165,4 @@
          config_timeZoneRulesUpdateTrackingEnabled are true.] -->
     <string name="config_timeZoneRulesDataPackage" translatable="false">com.google.android.timezone.data</string>
 
-    <!-- Flag indicating whether the assist disclosure can be disabled using
-         ASSIST_DISCLOSURE_ENABLED. -->
-    <bool name="config_allowDisablingAssistDisclosure">true</bool>
 </resources>
