@@ -225,7 +225,8 @@ PRODUCT_PACKAGES += \
     AccentColorIndigoOverlay \
     AccentColorFlatPinkOverlay \
     AccentColorCyanOverlay \
-    AccentColorBlueGrayOverlay
+    AccentColorBlueGrayOverlay \
+    AccentColorMintOverlay
 
 #OmniJaws
 PRODUCT_PACKAGES += \
