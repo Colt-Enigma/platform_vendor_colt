@@ -45,6 +45,11 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
 
+# Fonts
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/colt/prebuilt/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
+	vendor/colt/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+
 # Colt-specific broadcast actions whitelist
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/colt-sysconfig.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/colt-sysconfig.xml
@@ -89,7 +94,8 @@ PRODUCT_PACKAGES += \
     MarkupGoogle \
     SoundPickerPrebuilt \
     ThemePicker \
-    PixelThemes
+    PixelThemes \
+    FontGoogleSansOverlay
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
