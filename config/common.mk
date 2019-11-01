@@ -92,6 +92,7 @@ TARGET_SCREEN_HEIGHT ?= 1920
 
 # Themes
 PRODUCT_PACKAGES += \
+    ColtThemesStub \
     ThemePicker
 
 # Config
