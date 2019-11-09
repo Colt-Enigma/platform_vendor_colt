@@ -103,11 +103,18 @@
      -->
     <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
 
+    <!-- Name of a font family to use for headlines. If empty, falls back to platform default -->
+    <string name="config_headlineFontFamily">google-sans</string>
+    <!-- Name of the font family used for system surfaces where the font should use medium weight -->
+    <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
+    <!-- Allows setting custom fontFeatureSettings on specific text. -->
+    <string name="config_headlineFontFeatureSettings">ss03</string>
+
     <!-- Colon separated list of package names that should be granted DND access -->
     <string name="config_defaultDndAccessPackages" translatable="false">com.google.android.gms:com.google.android.GoogleCamera:com.google.intelligence.sense:com.google.android.settings.intelligence</string>
 
     <!-- Colon separated list of package names that should be granted Notification Listener access -->
-    <string name="config_defaultListenerAccessPackages" translatable="false">com.google.android.apps.nexuslauncher:com.google.android.setupwizard:com.google.android.apps.pixelmigrate:com.google.android.as</string>
+    <string name="config_defaultListenerAccessPackages" translatable="false">com.google.android.apps.nexuslauncher:com.google.android.setupwizard:com.google.android.apps.pixelmigrate:com.google.android.as:com.google.android.projection.gearhead</string>
 
     <!-- Package name that should be granted Notification Assistant access -->
     <string name="config_defaultAssistantAccessPackage" translatable="false">com.google.android.ext.services</string>
@@ -164,5 +171,56 @@
          [This is only used if config_enableUpdateableTimeZoneRules and
          config_timeZoneRulesUpdateTrackingEnabled are true.] -->
     <string name="config_timeZoneRulesDataPackage" translatable="false">com.google.android.timezone.data</string>
+
+        <!-- Whether WiFi display is supported by this device.
+         There are many prerequisites for this feature to work correctly.
+         Here are a few of them:
+         * The WiFi radio must support WiFi P2P.
+         * The WiFi radio must support concurrent connections to the WiFi display and
+           to an access point.
+         * The Audio Flinger audio_policy.conf file must specify a rule for the "r_submix"
+           remote submix module.  This module is used to record and stream system
+           audio output to the WiFi display encoder in the media server.
+         * The remote submix module "audio.r_submix.default" must be installed on the device.
+         * The device must be provisioned with HDCP keys (for protected content).
+    -->
+    <bool name="config_enableWifiDisplay">true</bool>
+
+    <!-- Flag indicating whether we should enable the adaptive sleep.-->
+    <bool name="config_adaptive_sleep_available">true</bool>
+
+    <!-- The package name for the system's app prediction service.
+         This service must be trusted, as it can be activated without explicit consent of the user.
+         Example: "com.android.intelligence/.AppPredictionService"
+    -->
+    <string name="config_defaultAppPredictionService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService</string>
+
+    <!-- The package name for the system's content suggestions service.
+         Provides suggestions for text and image selection regions in snapshots of apps and should
+         be able to classify the type of entities in those selections.
+         This service must be trusted, as it can be activated without explicit consent of the user.
+         If no service with the specified name exists on the device, content suggestions wil be
+         disabled.
+         Example: "com.android.contentsuggestions/.ContentSuggestionsService"
+    -->
+    <string name="config_defaultContentSuggestionsService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
+
+    <!-- The component name for the default system attention service.
+         This service must be trusted, as it can be activated without explicit consent of the user.
+         See android.attention.AttentionManagerService.
+    -->
+    <string name="config_defaultAttentionService">com.google.android.as/com.google.android.apps.miphone.aiai.attention.service.AiAiAttentionService</string>
+
+    <!-- The component name for the system-wide captions service.
+         This service must be trusted, as it controls part of the UI of the volume bar.
+         Example: "com.android.captions/.SystemCaptionsService"
+    -->
+    <string name="config_defaultSystemCaptionsService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.CaptionsService</string>
+
+    <!-- The component name for the system-wide captions manager service.
+         This service must be trusted, as the system binds to it and keeps it running.
+         Example: "com.android.captions/.SystemCaptionsManagerService"
+    -->
+    <string name="config_defaultSystemCaptionsManagerService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
 
 </resources>
