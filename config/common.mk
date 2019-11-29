@@ -97,6 +97,11 @@ PRODUCT_COPY_FILES += \
    vendor/colt/config/permissions/privapp-permissions-colt.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-colt.xml \
    vendor/colt/config/permissions/wallpaper_privapp-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/wallpaper_privapp-permissions.xml
 
+# Recorder Permissions
+PRODUCT_COPY_FILES += \
+    vendor/colt/config/permissions/privapp-permissions-recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-recorder.xml \
+    vendor/colt/config/permissions/org.pixelexperience.recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.pixelexperience.recorder.xml
+
 # Hidden API whitelist
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/colt-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/colt-hiddenapi-package-whitelist.xml
@@ -184,7 +189,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     ExactCalculator \
     Exchange2 \
-    Terminal
+    Terminal \
+    Recorder
 
 # Extra tools in Colt
 PRODUCT_PACKAGES += \
