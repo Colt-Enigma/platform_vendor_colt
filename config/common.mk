@@ -267,7 +267,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUIGoogle
+    SystemUI
 
 #Speed tuning
 PRODUCT_DEXPREOPT_SPEED_APPS += \
