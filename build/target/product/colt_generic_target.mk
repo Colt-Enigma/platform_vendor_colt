@@ -1,5 +1,4 @@
-# Copyright (C) 2017 Unlegacy-Android
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# -----------------------------------------------------------------
-# Lineage OTA update package
+$(call inherit-product, vendor/colt/config/common.mk)
 
-COLT_TARGET_PACKAGE := $(PRODUCT_OUT)/(COLT_BUILD_VERSION).zip
+PRODUCT_COPY_FILES += \
+    device/generic/goldfish/data/etc/permissions/privapp-permissions-goldfish.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-goldfish.xml \
 
-.PHONY: bacon
-bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(COLT_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(COLT_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(COLT_TARGET_PACKAGE).md5sum
-	@echo "Package Complete: $(COLT_TARGET_PACKAGE)" >&2
+# Allow building otatools
+TARGET_FORCE_OTA_PACKAGE := true
+
+PRODUCT_SDK_ADDON_NAME := colt
+PRODUCT_SDK_ADDON_SYS_IMG_SOURCE_PROP := $(LOCAL_PATH)/source.properties

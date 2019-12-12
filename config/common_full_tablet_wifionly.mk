@@ -1,9 +1,9 @@
-# Inherit full common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full.mk)
+# Inherit full common Colt stuff
+$(call inherit-product, vendor/colt/config/common_full.mk)
 
 # Required packages
 PRODUCT_PACKAGES += \
     LatinIME
 
-# Include Lineage LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/dictionaries
+# Include Colt LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/colt/overlay/dictionaries
