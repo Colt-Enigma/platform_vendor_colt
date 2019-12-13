@@ -76,7 +76,7 @@ PRODUCT_COPY_FILES += \
 
 # This is Colt!
 PRODUCT_COPY_FILES += \
-   vendor/colt/config/permissions/privapp-permissions-colt.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-colt.xml
+   vendor/colt/config/permissions/privapp-permissions-colt.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-colt.xml \
    vendor/colt/config/permissions/wallpaper_privapp-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/wallpaper_privapp-permissions.xml
 
 # Hidden API whitelist
@@ -84,7 +84,7 @@ PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/colt-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/colt-hiddenapi-package-whitelist.xml
 
 # Colt packages
-PRODUCT_PACKAGES += \ 
+PRODUCT_PACKAGES += \
     GalleryGoPrebuilt \
     MarkupGoogle \
     SoundPickerPrebuilt \
