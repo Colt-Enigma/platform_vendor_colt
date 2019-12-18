@@ -132,6 +132,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/etc/sysconfig/colt-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/colt-hiddenapi-package-whitelist.xml
 
+# Pre-granted permissions
+PRODUCT_COPY_FILES += \
+    vendor/colt/config/permissions/colt-default-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/colt-default-permissions.xml
+
 # Include AOSP audio files
 include vendor/colt/config/aosp_audio.mk
 
