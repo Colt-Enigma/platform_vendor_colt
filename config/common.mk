@@ -97,7 +97,8 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     PixelThemes \
     FontGoogleSansOverlay \
-    OmniStyle
+    OmniStyle \
+    Snap
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
