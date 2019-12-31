@@ -58,6 +58,14 @@ PRODUCT_COPY_FILES += \
 $(foreach f,$(wildcard vendor/colt/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
 
+# Extra packages
+PRODUCT_PACKAGES += \
+    Launcher3 \
+    messaging \
+    ExactCalculator \
+    Stk \
+    Terminal
+
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/lib/content-types.properties:$(TARGET_COPY_OUT_SYSTEM)/lib/content-types.properties
