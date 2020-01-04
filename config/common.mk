@@ -93,6 +93,7 @@ PRODUCT_COPY_FILES += \
 
 # This is Colt!
 PRODUCT_COPY_FILES += \
+   vendor/colt/config/permissions/privapp-permissions-google_prebuilt.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-google_prebuilt.xml \
    vendor/colt/config/permissions/privapp-permissions-colt.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-colt.xml \
    vendor/colt/config/permissions/wallpaper_privapp-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/wallpaper_privapp-permissions.xml
 
