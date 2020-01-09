@@ -107,7 +107,7 @@ PRODUCT_PACKAGES += \
     MarkupGoogle \
     SoundPickerPrebuilt \
     ThemePicker \
-    PixelThemes \
+    PixelThemesStub2019 \
     FontGoogleSansOverlay \
     OmniStyle \
     Snap \
