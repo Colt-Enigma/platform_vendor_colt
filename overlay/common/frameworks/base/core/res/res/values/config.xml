@@ -1,20 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2013 The CyanogenMod Project
-               (C) 2017-2019 The LineageOS Project
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="config_locationProviderPackageNames" translatable="false">
         <!-- The Google provider -->
@@ -28,51 +12,75 @@
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
     <!-- Disable stock OTA components if installed -->
-    <string-array name="config_globallyDisabledComponents" translatable="false">
+    <string-array name="config_disabledComponents" translatable="false">
+        <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateActivity</item>
+        <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateService$Receiver</item>
+        <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateService$SecretCodeReceiver</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateActivity</item>
-        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
-        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateGcmTaskService</item>
-        <item>com.google.android.setupwizard/com.google.android.setupwizard.time.DateTimeCheck</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService$Receiver</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService$ActiveReceiver</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService$SecretCodeReceiver</item>
     </string-array>
 
-    <string name="config_mms_user_agent">Colt-OS</string>
-    <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
+    <!-- Force enabling of some services that could have been previously disabled -->
+    <string-array name="config_forceEnabledComponents" translatable="false">
+        <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateService</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
+    </string-array>
 
-    <!-- Enable lockscreen rotation by default -->
-    <bool name="config_enableLockScreenRotation">true</bool>
+    <!-- Hide Project Fi app unless it is being used -->
+    <string-array name="config_disabledUntilUsedPreinstalledCarrierApps">
+        <item>com.google.android.apps.tycho</item>
+    </string-array>
 
-    <!-- Set this to true to enable the platform's auto-power-save modes like doze and
-         app standby.  These are not enabled by default because they require a standard
-         cloud-to-device messaging service for apps to interact correctly with the modes
-         (such as to be able to deliver an instant message to the device even when it is
-         dozing).  This should be enabled if you have such services and expect apps to
-         correctly use them when installed on your device.  Otherwise, keep this disabled
-         so that applications can still use their own mechanisms. -->
-    <bool name="config_enableAutoPowerModes">true</bool>
+    <!-- set default widget options to use googles clock -->
+    <string name="widget_default_package_name">com.google.android.deskclock</string>
+    <string name="widget_default_class_name">com.android.alarmclock.DigitalAppWidgetProvider</string>
 
-    <!-- If this is true, long press on power button will be available from a
-         non-interactive state. -->
-    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
+    <!-- set default messaging app to googles messenger -->
+    <string name="default_sms_application">com.google.android.apps.messaging</string>
 
-    <!--  Whether Multiuser UI should be shown -->
-    <bool name="config_enableMultiUserUI">true</bool>
+    <!-- set defaults for google services -->
+    <string name="config_appsAuthorizedForSharedAccounts">;com.android.vending;com.android.settings;</string>
+    <string name="config_persistentDataPackageName">com.google.android.gms</string>
 
-    <!--  Maximum number of supported users -->
-    <integer name="config_multiuserMaximumUsers">4</integer>
+   <!-- Enable doze powersaving mode -->
+   <bool name="config_enableAutoPowerModes">true</bool>
 
-    <!-- Flag indicating which package name can access the persistent data partition -->
-    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
+    <!-- Whether safe headphone volume is enabled or not (country specific). -->
+    <bool name="config_safe_media_volume_enabled">false</bool>
 
-   <!-- Set icon mask to circle -->
-   <string name="config_icon_mask" translatable="false">"M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"</string>
+    <!-- Controls the WiFi wakeup feature.
+          0 = Not available.
+          1 = Available.
+     -->
+    <integer translatable="false" name="config_wifi_wakeup_available">1</integer>
 
-    <!-- Whether action menu items should be displayed in ALLCAPS or not.
-         Defaults to true. If this is not appropriate for specific locales
-         it should be disabled in that locale's resources. -->
+    <!-- If true, the screen can be rotated via the accelerometer in all 4
+         rotations as the default behavior. -->
+    <bool name="config_allowAllRotations">true</bool>
+
+    <!-- Minimum color temperature, in Kelvin, supported by Night display. -->
+    <integer name="config_nightDisplayColorTemperatureMin">1600</integer>
+
+    <!-- Default color temperature, in Kelvin, to tint the screen when Night display is
+         activated. -->
+    <integer name="config_nightDisplayColorTemperatureDefault">2650</integer>
+
+    <!-- empheral resolver packages -->
+    <string-array name="config_ephemeralResolverPackage">
+        <item>com.google.android.gms</item>
+    </string-array>
+
+    <!-- Boolean indicating whether or not to revert to default country code when cellular
+    radio is unable to find any MCC information to infer wifi country code from -->
+    <bool translatable="false" name="config_wifi_revert_country_code_on_cellular_loss">true</bool>
+
+    <!-- Misc -->
     <bool name="config_buttonTextAllCaps">false</bool>
-
-    <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
-    <bool name="config_useRoundIcon">true</bool>
+    <dimen name="config_dialogCornerRadius">8.0dip</dimen>
+    <dimen name="config_buttonCornerRadius">4.0dip</dimen>
+    <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
@@ -80,14 +88,14 @@
     <!-- Flag indicating whether we should enable smart battery. -->
     <bool name="config_smart_battery_available">true</bool>
 
+    <!-- If this is true, long press on power button will be available from the non-interactive state -->
+    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
+
     <!-- Component name for default assistant on this device -->
     <string name="config_defaultAssistantComponentName">com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService</string>
 
-    <!-- Component name for the activity that will be presenting the Recents UI, which will receive special permissions for API related
-          to fetching and presenting recent tasks. The default configuration uses Launcehr3QuickStep as default launcher and points to
-          the corresponding recents component. When using a different default launcher, change this appropriately or use the default
-          systemui implementation: com.android.systemui/.recents.RecentsActivity -->
-    <string name="config_recentsComponentName">com.google.android.apps.nexuslauncher/com.android.quickstep.RecentsActivity</string>
+   <!-- Set icon mask to circle -->
+   <string name="config_icon_mask" translatable="false">"M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"</string>
 
     <!-- The component name, flattened to a string, for the default autofill service
          to  enabled for an user. This service must be trusted, as it can be activated
@@ -112,6 +120,20 @@
 
     <!-- Colon separated list of package names that should be granted DND access -->
     <string name="config_defaultDndAccessPackages" translatable="false">com.google.android.gms:com.google.android.GoogleCamera:com.google.intelligence.sense:com.google.android.settings.intelligence</string>
+
+    <!-- An array of packages for which notifications cannot be blocked.
+         Should only be used for core device functionality that must not be
+         rendered inoperative for safety reasons, like the phone dialer and
+         SMS handler. -->
+    <string-array translatable="false" name="config_nonBlockableNotificationPackages">
+        <item>com.android.dialer</item>
+        <item>com.android.messaging</item>
+        <item>com.google.android.dialer</item>
+        <item>com.google.android.dialer:phone_incoming_call</item>
+        <item>com.google.android.deskclock:Firing</item>
+        <item>com.google.android.setupwizard</item>
+        <item>com.google.android.apps.pixelmigrate</item>
+    </string-array>
 
     <!-- Colon separated list of package names that should be granted Notification Listener access -->
     <string name="config_defaultListenerAccessPackages" translatable="false">com.google.android.apps.nexuslauncher:com.google.android.setupwizard:com.google.android.apps.pixelmigrate:com.google.android.as:com.google.android.projection.gearhead</string>
@@ -172,7 +194,11 @@
          config_timeZoneRulesUpdateTrackingEnabled are true.] -->
     <string name="config_timeZoneRulesDataPackage" translatable="false">com.google.android.timezone.data</string>
 
-        <!-- Whether WiFi display is supported by this device.
+    <!-- Flag indicating whether the assist disclosure can be disabled using
+         ASSIST_DISCLOSURE_ENABLED. -->
+    <bool name="config_allowDisablingAssistDisclosure">true</bool>
+
+    <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
          Here are a few of them:
          * The WiFi radio must support WiFi P2P.
