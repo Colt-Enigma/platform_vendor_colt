@@ -26,6 +26,10 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
+# APN
+PRODUCT_COPY_FILES += \
+    vendor/colt/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
@@ -138,6 +142,30 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 PRODUCT_PACKAGES += \
 $(call inherit-product, vendor/colt/config/bootanimation.mk)
 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    keyguard.no_require_sim=true \
+    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
+    ro.com.google.clientidbase=android-google \
+    ro.com.android.wifi-watchlist=GoogleGuest \
+    ro.setupwizard.enterprise_mode=1 \
+    ro.setupwizard.network_required=false \
+    ro.setupwizard.gservices_delay=-1 \
+    ro.com.android.dataroaming=false \
+    drm.service.enabled=true \
+    net.tethering.noprovisioning=true \
+    persist.sys.dun.override=0 \
+    ro.build.selinux=1 \
+    ro.adb.secure=0 \
+    ro.setupwizard.rotation_locked=true \
+    ro.opa.eligible_device=true \
+    persist.sys.disable_rescue=true \
+    ro.config.calibration_cad=/system/etc/calibration_cad.xml
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    org.colt.fingerprint=$(PLATFORM_VERSION)-$(BUILD_ID)-$(COLT_BUILD_DATE)
+
+
 # AOSP packages
 PRODUCT_PACKAGES += \
     ExactCalculator \
@@ -222,7 +250,7 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay/common
 DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
 #Speed tuning
