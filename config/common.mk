@@ -136,7 +136,7 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Bootanimation
 PRODUCT_PACKAGES += \
-    bootanimation.zip
+$(call inherit-product, vendor/colt/config/bootanimation.mk)
 
 # AOSP packages
 PRODUCT_PACKAGES += \
