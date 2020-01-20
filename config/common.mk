@@ -110,7 +110,13 @@ PRODUCT_PACKAGES += \
     PixelThemes \
     FontGoogleSansOverlay \
     OmniStyle \
-    Snap
+    Snap \
+    Lawnchair
+
+# Lawnchair
+PRODUCT_COPY_FILES += \
+    vendor/colt/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/colt/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
