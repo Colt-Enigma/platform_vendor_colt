@@ -271,6 +271,9 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     WeatherIcons
 
+# Include Colt's theme files
+include vendor/colt/themes/backgrounds/themes.mk
+
 # Colt Stuff - Copy to System fonts
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/fonts/gobold/Gobold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Gobold.ttf \
