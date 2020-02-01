@@ -111,7 +111,8 @@ PRODUCT_PACKAGES += \
     FontGoogleSansOverlay \
     OmniStyle \
     Snap \
-    Lawnchair
+    Lawnchair \
+    WallpaperPicker2
 
 # Lawnchair
 PRODUCT_COPY_FILES += \
