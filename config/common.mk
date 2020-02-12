@@ -158,6 +158,9 @@ PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
 
+# Fonts
+include vendor/colt/config/fonts.mk
+
 # Themes
 PRODUCT_PACKAGES += \
     ThemePicker \
