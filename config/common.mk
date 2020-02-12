@@ -197,3 +197,6 @@ include packages/apps/Plugins/plugins.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/colt/config/partner_gms.mk
+
+# Inherit from audio config
+$(call inherit-product, vendor/colt/config/audio.mk)
