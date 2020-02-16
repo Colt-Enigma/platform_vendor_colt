@@ -27,7 +27,7 @@ endif
 TARGET_PRODUCT_SHORT := $(subst colt_,,$(TARGET_PRODUCT))
 
 # Set all versions
-COLT_VERSION = 5.6
+COLT_VERSION = 5.7
 COLT_BUILD_DATE := $(shell date -u +%d-%m-%Y)
 COLT_BUILD_VERSION := ColtOS-v$(COLT_VERSION)-$(COLT_BUILD_TYPE)-$(shell date -u +%Y%m%d)-$(TARGET_PRODUCT_SHORT)
 COLT_FINGERPRINT := ColtOS/v$(COLT_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%Y%m%d)/$(shell date -u +%H%M)
