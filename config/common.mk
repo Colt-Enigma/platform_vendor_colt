@@ -114,6 +114,7 @@ PRODUCT_PACKAGES += \
     Snap \
     Lawnchair \
     Longshot \
+    RetroMusicPlayer \
     WallpaperPicker2 \
     SafetyHubPrebuilt
 
