@@ -212,18 +212,6 @@ PRODUCT_PACKAGES += \
     wget \
     zip
 
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images
-
-# Custom off-mode charger
-ifeq ($(WITH_COLT_CHARGER),true)
-PRODUCT_PACKAGES += \
-    colt_charger_res_images \
-    font_log.png \
-    libhealthd.colt
-endif
-
 # Filesystems tools
 PRODUCT_PACKAGES += \
     fsck.exfat \
