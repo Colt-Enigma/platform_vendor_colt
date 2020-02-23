@@ -120,7 +120,8 @@ PRODUCT_PACKAGES += \
     Lawnchair \
     Longshot \
     WallpaperPicker2 \
-    SafetyHubPrebuilt
+    SafetyHubPrebuilt \
+    OPScreenRecorder
 
 # Lawnchair
 PRODUCT_COPY_FILES += \
