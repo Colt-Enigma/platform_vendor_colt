@@ -279,6 +279,9 @@ PRODUCT_PACKAGES += \
 # Include Colt's theme files
 include vendor/colt/themes/backgrounds/themes.mk
 
+# Allow overlays to be excluded from enforcing RRO
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay
+
 # Colt Stuff - Copy to System fonts
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/fonts/gobold/Gobold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Gobold.ttf \
