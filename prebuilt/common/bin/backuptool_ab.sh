@@ -46,7 +46,8 @@ restore_addon_d() {
 check_prereq() {
 # If there is no build.prop file the partition is probably empty.
 if [ ! -r /system/build.prop ]; then
-    return 0
+  echo "Backup/restore is not possible. Partition is probably empty"
+  return 1
 fi
 }
 
@@ -67,26 +68,24 @@ fi
 
 case "$1" in
   backup)
-    mkdir -p $C
-    if ! check_prereq; then
-      exit 127
+    if check_prereq; then
+      mkdir -p $C
+      preserve_addon_d
+      run_stage pre-backup
+      run_stage backup
+      run_stage post-backup
     fi
-    preserve_addon_d
-    run_stage pre-backup
-    run_stage backup
-    run_stage post-backup
   ;;
   restore)
-    if ! check_prereq; then
-      exit 127
+    if check_prereq; then
+      run_stage pre-restore
+      run_stage restore
+      run_stage post-restore
+      restore_addon_d
+      rm -rf $C
+      rm -rf /postinstall/tmp
+      sync
     fi
-    run_stage pre-restore
-    run_stage restore
-    run_stage post-restore
-    restore_addon_d
-    rm -rf $C
-    rm -rf /postinstall/tmp
-    sync
   ;;
   *)
     echo "Usage: $0 {backup|restore}"
