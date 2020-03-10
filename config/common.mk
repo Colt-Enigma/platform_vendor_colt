@@ -171,7 +171,8 @@ PRODUCT_PACKAGES += \
     SimpleDeviceConfig \
     SoftAPManager \
     ParallelSpace \
-    GameSpace
+    GameSpace \
+    Seedvault
 
 # CustomThemes
 PRODUCT_PACKAGES += \
