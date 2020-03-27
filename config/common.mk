@@ -108,6 +108,7 @@ PRODUCT_COPY_FILES += \
 
 # Colt packages
 PRODUCT_PACKAGES += \
+    ColtPapers \
     CustomDoze \
     GalleryGoPrebuilt \
     MarkupGoogle \
