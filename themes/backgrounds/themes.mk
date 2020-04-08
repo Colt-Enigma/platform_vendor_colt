@@ -9,4 +9,6 @@ PRODUCT_PACKAGES += \
     ChocoXSystemOverlay \
     ChocoXSystemUIOverlay \
     SystemDarkGrayOverlay \
-    SystemUIDarkGrayOverlay
+    SystemUIDarkGrayOverlay \
+    MaterialOceanSystemOverlay \
+    MaterialOceanSystemUIOverlay
