@@ -19,29 +19,15 @@ ifndef COLT_BUILD_TYPE
 endif
 
 # Only include Colt OTA for official builds
-CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
-
-ifeq ($(COLT_BUILD_TYPE), OFFICIAL)
-LIST = $(shell cat vendor/colt/colt.devices)
-   ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
-    IS_OFFICIAL=true
-
-COLT_BUILD_TYPE := OFFICIAL
+ifeq ($(filter-out Official,$(COLT_BUILD_TYPE)),)
     PRODUCT_PACKAGES += \
-    Updater
-endif
-
-ifneq ($(IS_OFFICIAL), true)
-COLT_BUILD_TYPE := UNOFFICIAL
-$(error Device is not official "$(CURRENT_DEVICE)")
-endif
+        Updater
 endif
 
 TARGET_PRODUCT_SHORT := $(subst colt_,,$(TARGET_PRODUCT))
 
 # Set all versions
 COLT_VERSION = 5.8
-COLT_MOD_VERSION = v10.0
 COLT_BUILD_DATE := $(shell date -u +%d-%m-%Y)
 COLT_BUILD_VERSION := ColtOS-v$(COLT_VERSION)-$(COLT_BUILD_TYPE)-$(shell date -u +%Y%m%d)-$(TARGET_PRODUCT_SHORT)
 COLT_FINGERPRINT := ColtOS/v$(COLT_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%Y%m%d)/$(shell date -u +%H%M)
@@ -49,6 +35,3 @@ COLT_DISPLAY_VERSION := ColtOS-v$(COLT_VERSION)-$(COLT_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.colt.display.version=$(COLT_DISPLAY_VERSION)
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-	ro.modversion=$(COLT_MOD_VERSION)
