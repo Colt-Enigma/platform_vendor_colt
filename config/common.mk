@@ -280,7 +280,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 #OmniJaws
 PRODUCT_PACKAGES += \
     OmniJaws \
-    WeatherIcons
+    WeatherIcons \
+    OmniSwitch
 
 # Include Colt's theme files
 include vendor/colt/themes/backgrounds/themes.mk
