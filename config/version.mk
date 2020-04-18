@@ -18,12 +18,6 @@ ifndef COLT_BUILD_TYPE
     COLT_BUILD_TYPE := Unofficial
 endif
 
-# Only include Colt OTA for official builds
-ifeq ($(filter-out Official,$(COLT_BUILD_TYPE)),)
-    PRODUCT_PACKAGES += \
-        Updater
-endif
-
 TARGET_PRODUCT_SHORT := $(subst colt_,,$(TARGET_PRODUCT))
 
 # Set all versions
