@@ -68,9 +68,7 @@ $(foreach f,$(wildcard vendor/colt/prebuilt/common/etc/init/*.rc),\
 # Extra packages
 PRODUCT_PACKAGES += \
     Launcher3 \
-    messaging \
     ExactCalculator \
-    Stk \
     Terminal
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
@@ -206,9 +204,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # AOSP packages
 PRODUCT_PACKAGES += \
-    ExactCalculator \
-    Exchange2 \
-    Terminal
+    Exchange2
 
 # Extra tools in Colt
 PRODUCT_PACKAGES += \
