@@ -21,7 +21,7 @@ endif
 TARGET_PRODUCT_SHORT := $(subst colt_,,$(TARGET_PRODUCT))
 
 # Set all versions
-COLT_VERSION = 5.9
+COLT_VERSION = 6.0
 COLT_MOD_VERSION := v10.0
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 
