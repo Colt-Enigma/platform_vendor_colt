@@ -122,6 +122,12 @@ PRODUCT_PACKAGES += \
     SafetyHubPrebuilt \
     OPScreenRecorder
 
+# OTA Support
+ifeq ($(COLT_BUILD_TYPE), Official)
+PRODUCT_PACKAGES += \
+    Updater
+endif
+
 # Lawnchair
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
