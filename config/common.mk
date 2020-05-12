@@ -49,10 +49,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
 
-# APN
-PRODUCT_COPY_FILES += \
-    vendor/colt/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
