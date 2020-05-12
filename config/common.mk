@@ -26,6 +26,24 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
+# Enable WiFi Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.wfd.nohdcp=1 \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0
+
+# TEMP: Enable transitional log for Privileged permissions
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.control_privapp_permissions=log
+
+# Storage manager
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.storage_manager.enabled=true
+
+# Media
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    media.recorder.show_manufacturer_and_model=true
+
 # APN
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
@@ -66,12 +84,6 @@ PRODUCT_COPY_FILES += \
 $(foreach f,$(wildcard vendor/colt/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
 
-# Extra packages
-PRODUCT_PACKAGES += \
-    Launcher3 \
-    ExactCalculator \
-    Terminal
-
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/lib/content-types.properties:$(TARGET_COPY_OUT_SYSTEM)/lib/content-types.properties
@@ -101,30 +113,6 @@ PRODUCT_COPY_FILES += \
 # Hidden API whitelist
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/colt-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/colt-hiddenapi-package-whitelist.xml
-
-# Colt packages
-PRODUCT_PACKAGES += \
-    ColtPapers \
-    CustomDoze \
-    GalleryGoPrebuilt \
-    MarkupGoogle \
-    SoundPickerPrebuilt \
-    ThemePicker \
-    PixelThemesStub2019 \
-    FontGoogleSansOverlay \
-    OmniStyle \
-    Snap \
-    Lawnchair \
-    Longshot \
-    WallpaperPicker2 \
-    SafetyHubPrebuilt \
-    OPScreenRecorder
-
-# OTA Support
-ifeq ($(COLT_BUILD_TYPE), Official)
-PRODUCT_PACKAGES += \
-    Updater
-endif
 
 # Lawnchair
 PRODUCT_COPY_FILES += \
@@ -166,7 +154,6 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Bootanimation
-PRODUCT_PACKAGES += \
 $(call inherit-product, vendor/colt/config/bootanimation.mk)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -189,22 +176,37 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.disable_rescue=true \
     ro.config.calibration_cad=/system/etc/calibration_cad.xml
 
-# Enable WiFi Display
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.wfd.nohdcp=1 \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0
-
-# TEMP: Enable transitional log for Privileged permissions
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.control_privapp_permissions=log
-
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     org.colt.fingerprint=$(PLATFORM_VERSION)-$(BUILD_ID)-$(COLT_BUILD_DATE)
 
-# AOSP packages
+# Colt packages
 PRODUCT_PACKAGES += \
-    Exchange2
+    ColtPapers \
+    CustomDoze \
+    GalleryGoPrebuilt \
+    MarkupGoogle \
+    SoundPickerPrebuilt \
+    ThemePicker \
+    PixelThemesStub2019 \
+    FontGoogleSansOverlay \
+    OmniStyle \
+    Snap \
+    Lawnchair \
+    Longshot \
+    WallpaperPicker2 \
+    SafetyHubPrebuilt \
+    OPScreenRecorder
+
+# OTA Support
+ifeq ($(COLT_BUILD_TYPE), Official)
+PRODUCT_PACKAGES += \
+    Updater
+endif
+
+# Extra packages
+PRODUCT_PACKAGES += \
+    ExactCalculator \
+    Terminal
 
 # Extra tools in Colt
 PRODUCT_PACKAGES += \
@@ -258,14 +260,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     rsync
 
-# Storage manager
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.storage_manager.enabled=true
-
-# Media
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    media.recorder.show_manufacturer_and_model=true
-
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \
     procmem
@@ -273,23 +267,9 @@ PRODUCT_PACKAGES_DEBUG += \
 # Root
 PRODUCT_PACKAGES += \
     adb_root
-ifneq ($(TARGET_BUILD_VARIANT),user)
-ifeq ($(WITH_SU),true)
-PRODUCT_PACKAGES += \
-    su
-endif
-endif
-
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay/common
-DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
-
-#Speed tuning
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Settings \
     SystemUI
 
 #OmniJaws
@@ -300,6 +280,9 @@ PRODUCT_PACKAGES += \
 
 # Include Colt's theme files
 include vendor/colt/themes/backgrounds/themes.mk
+
+# Common overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
 # Allow overlays to be excluded from enforcing RRO
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay
