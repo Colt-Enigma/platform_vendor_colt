@@ -1,4 +1,4 @@
-# Copyright (C) 2018 ColtOS Project
+# Copyright (C) 2020 ColtOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,25 +13,20 @@
 # limitations under the License.
 
 # Versioning System
+COLT_MAJOR_VERSION = 10.0
 
-ifndef COLT_BUILD_TYPE
-    COLT_BUILD_TYPE := Unofficial
-endif
+COLT_RELEASE_VERSION = v6.0
 
-TARGET_PRODUCT_SHORT := $(subst colt_,,$(TARGET_PRODUCT))
+COLT_BUILD_TYPE ?= Unofficial
 
-# Set all versions
-COLT_VERSION = 6.0
-COLT_MOD_VERSION := v10.0
-CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+COLT_BUILD_DATE := $(shell date +"%Y%m%d")
 
-COLT_BUILD_DATE := $(shell date -u +%d-%m-%Y)
-COLT_BUILD_VERSION := ColtOS-v$(COLT_VERSION)-$(COLT_BUILD_TYPE)-$(shell date -u +%Y%m%d)-$(TARGET_PRODUCT_SHORT)
-COLT_FINGERPRINT := ColtOS/v$(COLT_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%Y%m%d)/$(shell date -u +%H%M)
-COLT_DISPLAY_VERSION := ColtOS-v$(COLT_VERSION)-$(COLT_BUILD_TYPE)
+TARGET_PRODUCT_SHORT := $(subst colt_,,$(COLT_BUILD))
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-        ro.colt.releasetype=$(COLT_BUILD_TYPE) \
-        ro.coltversion=$(COLT_VERSION) \
-        ro.colt.device=$(CURRENT_DEVICE) \
-        ro.modversion=$(COLT_MOD_VERSION)
+COLT_VERSION := ColtOS-$(COLT_RELEASE_VERSION)-$(COLT_BUILD)-$(COLT_BUILD_DATE)-$(COLT_BUILD_TYPE)
+
+COLT_MOD_VERSION := $(COLT_MAJOR_VERSION)-$(COLT_RELEASE_VERSION)
+
+COLT_DISPLAY_VERSION := ColtOS-$(COLT_RELEASE_VERSION)-$(COLT_BUILD_TYPE)
+
+COLT_FINGERPRINT := ColtOS/$(COLT_MOD_VERSION)/$(TARGET_PRODUCT_SHORT)/$(COLT_BUILD_DATE)
