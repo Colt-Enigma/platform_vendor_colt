@@ -160,6 +160,7 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OmniStyle \
     OmniSwitch \
+    StitchImage \
     ThemePicker \
     WallpaperPicker2
 
