@@ -84,11 +84,6 @@ $(foreach f,$(wildcard vendor/colt/prebuilt/common/etc/init/*.rc),\
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/lib/content-types.properties:$(TARGET_COPY_OUT_SYSTEM)/lib/content-types.properties
 
-# Markup libs
-PRODUCT_COPY_FILES += \
-    vendor/colt/prebuilt/google/lib/libsketchology_native.so:system/product/lib/libsketchology_native.so \
-    vendor/colt/prebuilt/google/lib64/libsketchology_native.so:system/product/lib64/libsketchology_native.so
-
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
@@ -110,22 +105,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/colt-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/colt-hiddenapi-package-whitelist.xml
 
-# Lawnchair
-PRODUCT_COPY_FILES += \
-    vendor/colt/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
-    vendor/colt/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
-
 # Power whitelist
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/colt-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/colt-power-whitelist.xml
-
-# Hidden api whitelisted apps
-PRODUCT_COPY_FILES += \
-    vendor/colt/prebuilt/common/etc/sysconfig/colt-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/colt-hiddenapi-package-whitelist.xml
-
-# Pre-granted permissions
-PRODUCT_COPY_FILES += \
-    vendor/colt/config/permissions/colt-default-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/colt-default-permissions.xml
 
 # Include AOSP audio files
 include vendor/colt/config/aosp_audio.mk
@@ -177,20 +159,12 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Colt packages
 PRODUCT_PACKAGES += \
-    ColtPapers \
     CustomDoze \
-    GalleryGoPrebuilt \
-    MarkupGoogle \
-    SoundPickerPrebuilt \
-    ThemePicker \
-    PixelThemesStub2019 \
+    OmniJaws \
     OmniStyle \
-    Snap \
-    Lawnchair \
-    Longshot \
-    WallpaperPicker2 \
-    SafetyHubPrebuilt \
-    OPScreenRecorder
+    OmniSwitch \
+    ThemePicker \
+    WallpaperPicker2
 
 # OTA Support
 ifeq ($(COLT_BUILD_TYPE), Official)
@@ -271,12 +245,6 @@ PRODUCT_PACKAGES += \
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
-
-#OmniJaws
-PRODUCT_PACKAGES += \
-    OmniJaws \
-    WeatherIcons \
-    OmniSwitch
 
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
