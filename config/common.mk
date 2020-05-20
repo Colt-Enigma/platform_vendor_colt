@@ -278,9 +278,6 @@ PRODUCT_PACKAGES += \
     WeatherIcons \
     OmniSwitch
 
-# Include Colt's theme files
-include vendor/colt/themes/backgrounds/themes.mk
-
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
