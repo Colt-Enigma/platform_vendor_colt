@@ -154,9 +154,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.disable_rescue=true \
     ro.config.calibration_cad=/system/etc/calibration_cad.xml
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    org.colt.fingerprint=$(PLATFORM_VERSION)-$(BUILD_ID)-$(COLT_BUILD_DATE)
-
 # Colt packages
 PRODUCT_PACKAGES += \
     CustomDoze \
@@ -251,6 +248,9 @@ DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
 # Allow overlays to be excluded from enforcing RRO
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay
+
+# Our ColtSpares
+-include vendor/ColtSpares/ColtSpares.mk
 
 -include vendor/colt/config/partner_gms.mk
 -include vendor/colt/config/version.mk
