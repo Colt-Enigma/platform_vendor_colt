@@ -160,6 +160,7 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OmniStyle \
     OmniSwitch \
+    Phonograph \
     StitchImage \
     ThemePicker \
     WallpaperPicker2
