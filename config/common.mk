@@ -157,6 +157,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ColtThemesStub \
     ThemePicker \
+    TouchGestures \
     SimpleDeviceConfig \
     SoftAPManager \
     ParallelSpace
