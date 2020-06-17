@@ -134,6 +134,9 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 # Bootanimation
 $(call inherit-product, vendor/colt/config/bootanimation.mk)
 
+# ColtSpares
+$(call inherit-product, vendor/ColtSpares/ColtSpares.mk)
+
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     keyguard.no_require_sim=true \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -250,9 +253,6 @@ DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
 # Allow overlays to be excluded from enforcing RRO
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay
-
-# Our ColtSpares
--include vendor/ColtSpares/ColtSpares.mk
 
 -include vendor/colt/config/partner_gms.mk
 -include vendor/colt/config/version.mk
