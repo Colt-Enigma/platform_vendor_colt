@@ -202,11 +202,8 @@ PRODUCT_PACKAGES += \
 
 # Offline charger
 PRODUCT_PACKAGES += \
-    charger_res_images
-ifeq ($(TARGET_USES_PIXEL_CHARGER),true)
-PRODUCT_PACKAGES += \
+    charger_res_images \
     product_charger_res_images
-endif
 
 # Filesystems tools
 PRODUCT_PACKAGES += \
