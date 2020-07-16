@@ -10,6 +10,7 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.colt.build.date=$(COLT_BUILD_DATE) \
     ro.colt.display.version=$(COLT_DISPLAY_VERSION) \
     ro.colt.maintainer=$(COLT_DEVICE_MAINTAINER) \
+    ro.colt.major_version=$(COLT_MAJOR_VERSION) \
     ro.colt.releasetype=$(COLT_BUILD_TYPE) \
     ro.colt.release.version=$(COLT_RELEASE_VERSION) \
     ro.colt.version=$(COLT_VERSION) \
