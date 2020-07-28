@@ -40,4 +40,8 @@
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
     </privapp-permissions>
 
+   <privapp-permissions package="com.alensw.PicFolder">
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+    </privapp-permissions>
+
 </permissions>
