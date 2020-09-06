@@ -15,7 +15,7 @@
 # Versioning System
 COLT_MAJOR_VERSION = 10.0
 
-COLT_RELEASE_VERSION = v6.3
+COLT_RELEASE_VERSION = v6.4Smokey
 
 COLT_BUILD_TYPE ?= Unofficial
 
