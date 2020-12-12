@@ -83,6 +83,10 @@
         <item>device_personalization_services/NotificationAssistant__enable_service=false</item>
         <item>device_personalization_services/Overview__enable_overview=false</item>
         <item>device_personalization_services/VisualCortex__enable=false</item>
+
+        <!-- ART heap compaction for cached apps -->
+        <item>activity_manager/use_compaction=true</item>
+
     </string-array>
 
 </resources>
