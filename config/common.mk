@@ -294,3 +294,15 @@ endif
 # Themes
 $(call inherit-product, vendor/colt/config/themes.mk)
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
+
+# Statusbar Icons
+PRODUCT_PACKAGES += \ 
+StrokeSignalOverlay \ 
+SneakySignalOverlay \ 
+XperiaSignalOverlay
+
+# Wi-Fi Icons
+PRODUCT_PACKAGES += \ 
+StrokeWiFiOverlay \ 
+SneakyWiFiOverlay \ 
+XperiaWiFiOverlay
