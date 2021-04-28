@@ -296,13 +296,23 @@ $(call inherit-product, vendor/colt/config/themes.mk)
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
 # Statusbar Icons
-PRODUCT_PACKAGES += \ 
-StrokeSignalOverlay \ 
-SneakySignalOverlay \ 
-XperiaSignalOverlay
+PRODUCT_PACKAGES += \
+    StrokeSignalOverlay \
+    SneakySignalOverlay \
+    XperiaSignalOverlay \
+    ZigZagSignalOverlay \
+    WavySignalOverlay \
+    RoundSignalOverlay \
+    InsideSignalOverlay \
+    BarsSignalOverlay
 
 # Wi-Fi Icons
-PRODUCT_PACKAGES += \ 
-StrokeWiFiOverlay \ 
-SneakyWiFiOverlay \ 
-XperiaWiFiOverlay
+PRODUCT_PACKAGES += \
+    StrokeWiFiOverlay \
+    SneakyWiFiOverlay \
+    XperiaWiFiOverlay \
+    ZigZagWiFiOverlay \
+    WavyWiFiOverlay \
+    RoundWiFiOverlay \
+    InsideWiFiOverlay \
+    BarsWiFiOverlay
