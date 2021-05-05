@@ -204,5 +204,8 @@ endif
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
+# Audio
+-include vendor/colt/audio/audio.mk
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/colt/config/partner_gms.mk
