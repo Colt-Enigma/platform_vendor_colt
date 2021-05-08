@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #
 # Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2021 The ColtOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,7 +22,7 @@ from xml.dom.minidom import parseString
 def main(argv):
     reload(sys)
     sys.setdefaultencoding('utf8')
-    original_file = 'vendor/lineage/prebuilt/common/etc/apns-conf.xml'
+    original_file = 'vendor/colt/prebuilt/common/etc/apns-conf.xml'
 
     if len(argv) == 3:
         output_file_path = argv[1]

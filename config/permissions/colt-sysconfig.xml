@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2018 The Android Open Source Project
+<!-- Copyright (C) 2017-2018 The ColtOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+          http://www.apache.org/licenses/LICENSE-2.0
 
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,10 +14,9 @@
      limitations under the License.
 -->
 
-<resources>
-    <dimen name="app_bar_height">64.0dip</dimen>
-    <dimen name="contextual_card_preallocated_height">68.0dip</dimen>
-    <dimen name="search_bar_card_elevation">1.0dip</dimen>
-    <dimen name="search_bar_corner_radius">8.0dip</dimen>
-    <dimen name="search_bar_margin">8.0dip</dimen>
-</resources>
+<config>
+
+    <!-- Broadcast actions that are currently exempted from O+ background
+         delivery restrictions. -->
+    <allow-implicit-broadcast action="android.intent.action.CAMERA_BUTTON" />
+</config>
