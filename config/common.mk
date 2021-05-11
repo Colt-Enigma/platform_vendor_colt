@@ -99,6 +99,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
 
+# StitchImage
+PRODUCT_PACKAGES += \
+    StitchImage
+
 # Extra tools in Colt
 PRODUCT_PACKAGES += \
     7z \
