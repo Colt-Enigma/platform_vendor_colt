@@ -160,5 +160,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
+# Include ColtSpares
+include vendor/ColtSpares/ColtSpares.mk
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/colt/config/partner_gms.mk
