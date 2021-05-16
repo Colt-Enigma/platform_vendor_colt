@@ -99,6 +99,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
 
+# Seedvault
+PRODUCT_PACKAGES += \
+    Seedvault
+
 # StitchImage
 PRODUCT_PACKAGES += \
     StitchImage
