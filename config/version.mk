@@ -37,4 +37,5 @@ PRODUCT_GENERIC_PROPERTIES += \
   ro.colt.build.type=$(COLT_BUILD_TYPE) \
   ro.colt.build.date=$(COLT_BUILD_DATE) \
   ro.colt.build.fingerprint=$(COLT_BUILD_FINGERPRINT) \
-  ro.colt.build.maintainer=$(COLT_BUILD_MAINTAINER)
+  ro.colt.build.maintainer=$(COLT_BUILD_MAINTAINER) \
+  ro.colt.main.version=$(COLT_MAJOR_VERSION)
