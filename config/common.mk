@@ -107,6 +107,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     StitchImage
 
+# OmniStyle
+PRODUCT_PACKAGES += \
+    OmniStyle
+
 # Extra tools in Colt
 PRODUCT_PACKAGES += \
     7z \
