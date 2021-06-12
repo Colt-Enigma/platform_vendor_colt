@@ -30,6 +30,7 @@ SOONG_CONFIG_NAMESPACES += coltGlobalVars
 SOONG_CONFIG_coltGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
+    camera_skip_kind_check \
     disable_postrender_cleanup \
     has_hh_vsync_issue \
     has_legacy_camera_hal1 \
@@ -102,6 +103,7 @@ SOONG_CONFIG_coltGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_L
 SOONG_CONFIG_coltGlobalVars_target_process_sdk_version_override := $(TARGET_PROCESS_SDK_VERSION_OVERRIDE)
 SOONG_CONFIG_coltGlobalVars_target_surfaceflinger_fod_lib := $(TARGET_SURFACEFLINGER_FOD_LIB)
 SOONG_CONFIG_coltGlobalVars_uses_camera_parameter_lib := $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY)
+SOONG_CONFIG_coltGlobalVars_camera_skip_kind_check := $(TARGET_CAMERA_SKIP_KIND_CHECK)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_coltQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else
