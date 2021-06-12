@@ -113,6 +113,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     StitchImage
 
+# OmniJaws
+PRODUCT_PACKAGES += \
+    OmniJaws
+
 # OmniStyle
 PRODUCT_PACKAGES += \
     OmniStyle
