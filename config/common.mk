@@ -101,6 +101,7 @@ PRODUCT_PACKAGES += \
     ColtThemesStub \
     ThemePicker \
     GamingMode \
+    SoftAPManager \
     SetupWizard
 
 # Config
