@@ -100,7 +100,8 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 PRODUCT_PACKAGES += \
     ColtThemesStub \
     ThemePicker \
-    GamingMode
+    GamingMode \
+    SetupWizard
 
 # Config
 PRODUCT_PACKAGES += \
