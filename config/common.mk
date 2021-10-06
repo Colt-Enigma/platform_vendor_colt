@@ -197,12 +197,6 @@ endif
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
-# Include ColtSpares
-include vendor/ColtSpares/ColtSpares.mk
-
-# Plugins
-include packages/apps/Plugins/plugins.mk
-
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/colt/config/partner_gms.mk
 
