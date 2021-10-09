@@ -100,6 +100,10 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay \
+    AvoidAppsInCutoutOverlay
+
 # Themes
 PRODUCT_PACKAGES += \
     ColtThemesStub \
