@@ -53,6 +53,10 @@ PRODUCT_COPY_FILES += \
 $(foreach f,$(wildcard vendor/colt/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
 
+# Enable one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
+
 # Font service Permissions
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/privapp-permissions-colt-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-colt-system_ext.xml \
