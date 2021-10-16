@@ -24,6 +24,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
+# Disable blur on app-launch
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.launcher.blur.appLaunch=0
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/colt/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
