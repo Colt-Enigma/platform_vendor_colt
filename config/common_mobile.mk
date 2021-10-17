@@ -1,11 +1,6 @@
 # Inherit common mobile Colt stuff
 $(call inherit-product, vendor/colt/config/common.mk)
 
-# Default notification/alarm sounds
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.notification_sound=Argon.ogg \
-    ro.config.alarm_alert=Hassium.ogg
-
 # AOSP packages
 PRODUCT_PACKAGES += \
     ExactCalculator
