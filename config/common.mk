@@ -319,3 +319,7 @@ PRODUCT_PACKAGES += \
     RoundWiFiOverlay \
     InsideWiFiOverlay \
     BarsWiFiOverlay
+
+# RRO Overlays
+PRODUCT_PACKAGES += \
+    NavigationBarModeGesturalOverlayFS
