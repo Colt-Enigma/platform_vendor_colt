@@ -290,3 +290,7 @@ ifeq ($(TARGET_BUILD_WITH_LTO),true)
 GLOBAL_THINLTO := true
 USE_THINLTO_CACHE := true
 endif
+
+# Themes
+$(call inherit-product, vendor/colt/config/themes.mk)
+-include $(WORKSPACE)/build_env/image-auto-bits.mk
