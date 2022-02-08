@@ -115,7 +115,7 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
-    ColtThemesStub \
+    COLTThemesStub \
     ThemePicker \
     GamingMode \
     SoftAPManager \
@@ -123,6 +123,7 @@ PRODUCT_PACKAGES += \
 
 # Config
 PRODUCT_PACKAGES += \
+    RepainterServicePriv \
     SimpleDeviceConfig
 
 # Seedvault
