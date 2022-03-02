@@ -176,7 +176,7 @@
     -->
     <string name="config_wallpaperCropperPackage" translatable="false">com.android.wallpaper</string>
 
-    <!-- Exempt AiAi from privacy indicators -->
+<<<<<<< HEAD
     <string name="config_systemAmbientAudioIntelligence">com.google.android.as</string>
     <string name="config_systemAudioIntelligence">com.google.android.as</string>
     <string name="config_systemNotificationIntelligence">com.google.android.as</string>
@@ -189,4 +189,7 @@
 
     <!-- Whether or not to add a "people" notifications section -->
     <bool name="config_usePeopleFiltering">true</bool>
+
+    <!-- Colon separated list of package names that should be granted Notification Listener access -->
+    <string name="config_defaultListenerAccessPackages" translatable="false">com.android.launcher3</string>
 </resources>
