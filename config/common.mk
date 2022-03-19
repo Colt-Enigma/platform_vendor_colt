@@ -225,7 +225,6 @@ DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/colt/config/partner_gms.mk
--include vendor/colt/config/gapps.mk
 
 # ThemeOverlays
 -include packages/overlays/Themes/themes.mk
