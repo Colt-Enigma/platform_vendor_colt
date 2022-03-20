@@ -85,8 +85,8 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_045e_Product_0719.kl
 
 # Enforce privapp-permissions whitelist
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.control_privapp_permissions=enforce
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.control_privapp_permissions=log
 
 # Include AOSP audio files
 include vendor/colt/config/aosp_audio.mk
@@ -119,14 +119,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     COLTThemesStub \
     ThemePicker \
-    GamingMode \
-    SoftAPManager \
-    SetupWizard
-
-# Config
-PRODUCT_PACKAGES += \
-    RepainterServicePriv \
-    SimpleDeviceConfig
+    SimpleDeviceConfig \
+    SoftAPManager
 
 # Seedvault
 PRODUCT_PACKAGES += \
@@ -198,10 +192,6 @@ SELINUX_IGNORE_NEVERALLOWS ?= true
 PRODUCT_PACKAGES_DEBUG += \
     procmem
 
-# Root
-PRODUCT_PACKAGES += \
-    adb_root
-
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
@@ -227,16 +217,3 @@ DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 -include vendor/colt/config/partner_gms.mk
 -include vendor/colt/config/gapps.mk
 
-# ThemeOverlays
--include packages/overlays/Themes/themes.mk
-
-# Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED ?= true
-ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
-PRODUCT_PACKAGES += \
-    FaceUnlockService
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
-endif
