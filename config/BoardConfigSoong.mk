@@ -31,7 +31,6 @@ SOONG_CONFIG_coltGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     camera_skip_kind_check \
-    disable_postrender_cleanup \
     has_hh_vsync_issue \
     has_memfd_backport \
     needs_netd_direct_connect_rule \
@@ -61,7 +60,6 @@ SOONG_CONFIG_coltQcomVars += \
 endif
 
 # Soong bool variables
-SOONG_CONFIG_coltGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
 SOONG_CONFIG_coltGlobalVars_has_hh_vsync_issue := $(TARGET_HAS_HH_VSYNC_ISSUE)
 SOONG_CONFIG_coltGlobalVars_has_memfd_backport := $(TARGET_HAS_MEMFD_BACKPORT)
 SOONG_CONFIG_coltGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
