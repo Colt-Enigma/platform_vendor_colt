@@ -32,7 +32,6 @@ SOONG_CONFIG_coltGlobalVars += \
     camera_skip_kind_check \
     has_hh_vsync_issue \
     has_memfd_backport \
-    needs_netd_direct_connect_rule \
     camera_needs_client_info \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
@@ -60,7 +59,6 @@ endif
 # Soong bool variables
 SOONG_CONFIG_coltGlobalVars_has_hh_vsync_issue := $(TARGET_HAS_HH_VSYNC_ISSUE)
 SOONG_CONFIG_coltGlobalVars_has_memfd_backport := $(TARGET_HAS_MEMFD_BACKPORT)
-SOONG_CONFIG_coltGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
 SOONG_CONFIG_coltNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_coltQcomVars_legacy_hw_disk_encryption := $(TARGET_LEGACY_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_coltQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
