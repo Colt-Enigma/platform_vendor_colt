@@ -38,7 +38,6 @@ SOONG_CONFIG_coltGlobalVars += \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
     target_ld_shim_libs \
-    target_process_sdk_version_override \
     target_surfaceflinger_fod_lib \
 
 SOONG_CONFIG_NAMESPACES += coltNvidiaVars
@@ -85,7 +84,6 @@ SOONG_CONFIG_coltGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OF
 SOONG_CONFIG_coltGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 SOONG_CONFIG_coltGlobalVars_target_inputdispatcher_skip_event_key := $(TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY)
 SOONG_CONFIG_coltGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_LD_SHIM_LIBS))
-SOONG_CONFIG_coltGlobalVars_target_process_sdk_version_override := $(TARGET_PROCESS_SDK_VERSION_OVERRIDE)
 SOONG_CONFIG_coltGlobalVars_target_surfaceflinger_fod_lib := $(TARGET_SURFACEFLINGER_FOD_LIB)
 SOONG_CONFIG_coltGlobalVars_camera_skip_kind_check := $(TARGET_CAMERA_SKIP_KIND_CHECK)
 
