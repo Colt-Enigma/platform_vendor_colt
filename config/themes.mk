@@ -38,4 +38,6 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
+    AndroidBlackThemeOverlay \
+    AndroidClearThemeOverlay \
     AndroidVividThemeOverlay
