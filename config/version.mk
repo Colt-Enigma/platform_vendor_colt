@@ -15,7 +15,7 @@
 #
 
 # ColtOS Versioning System
-COLT_MAJOR_VERSION = 13.0
+COLT_MAJOR_VERSION = v13.0
 COLT_RELEASE_VERSION = v9.0
 COLT_BUILD_TYPE ?= Unofficial
 COLT_BUILD_MAINTAINER ?= Unknown
@@ -59,10 +59,18 @@ COLT_VERSION := ColtOS-$(COLT_MAJOR_VERSION)-$(COLT_BUILD_VERSION)-$(COLT_BUILD)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.colt.device=$(COLT_BUILD) \
   ro.colt.version=$(COLT_VERSION) \
+  ro.colt.releasetype=$(COLT_BUILD_TYPE) \
   ro.colt.build.version=$(COLT_BUILD_VERSION) \
   ro.colt.build.type=$(COLT_BUILD_TYPE) \
   ro.colt.build.date=$(COLT_BUILD_DATE) \
   ro.colt.build.variant=$(COLT_BUILD_VARIANT) \
+  ro.colt.ziptype=$(COLT_BUILD_VARIANT) \
   ro.colt.build.fingerprint=$(COLT_BUILD_FINGERPRINT) \
   ro.colt.build.maintainer=$(COLT_BUILD_MAINTAINER) \
+  ro.modversion=$(COLT_MAJOR_VERSION) \
   ro.colt.main.version=$(COLT_MAJOR_VERSION)
+
+COLT_DISPLAY_VERSION := ColtOS-$(COLT_MAJOR_VERSION)-$(COLT_BUILD_TYPE)
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+  ro.colt.display.version=$(COLT_DISPLAY_VERSION)
