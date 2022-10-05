@@ -187,6 +187,9 @@ has_memfd_backport {
     soong_config_variables: {
         has_memfd_backport: {
             cppflags: ["-DHAS_MEMFD_BACKPORT"],
+	},
+    },
+}
 
 soong_config_module_type {
     name: "egl_display_array",
