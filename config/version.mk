@@ -16,9 +16,10 @@
 
 # ColtOS Versioning System
 COLT_MAJOR_VERSION = v13.0
-COLT_RELEASE_VERSION = v9.0
+COLT_RELEASE_VERSION = Phoenix
 COLT_BUILD_TYPE ?= Unofficial
 COLT_BUILD_MAINTAINER ?= Unknown
+COLT_BUILD_ZIP_TYPE := VANILLA
 
 # Colt Release
 ifeq ($(COLT_BUILD_TYPE), Official)
@@ -36,6 +37,12 @@ PRODUCT_PACKAGES += \
 
 endif
 
+ifdef COLT_GAPPS
+    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
+    COLT_BUILD_ZIP_TYPE := GAPPS
+endif
+
+
 # System version
 TARGET_PRODUCT_SHORT := $(subst colt_,,$(COLT_BUILD_TYPE))
 
@@ -48,20 +55,20 @@ COLT_DATE_MINUTE := $(shell date -u +%M)
 COLT_BUILD_DATE := $(COLT_DATE_YEAR)$(COLT_DATE_MONTH)$(COLT_DATE_DAY)-$(COLT_DATE_HOUR)$(COLT_DATE_MINUTE)
 COLT_BUILD_VERSION := $(COLT_RELEASE_VERSION)
 COLT_BUILD_FINGERPRINT := ColtOS/$(COLT_MOD_VERSION)/$(TARGET_PRODUCT_SHORT)/$(COLT_BUILD_DATE)
-COLT_VERSION := ColtOS-$(COLT_MAJOR_VERSION)-$(COLT_BUILD_VERSION)-$(COLT_BUILD)-$(COLT_BUILD_TYPE)-$(COLT_BUILD_DATE)
+COLT_VERSION := ColtOS-$(COLT_MAJOR_VERSION)-$(COLT_BUILD_VERSION)-$(COLT_BUILD_TYPE)-$(COLT_BUILD)-$(COLT_BUILD_DATE)-$(COLT_BUILD_ZIP_TYPE)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.colt.device=$(COLT_BUILD) \
   ro.colt.version=$(COLT_VERSION) \
-  ro.colt.releasetype=$(COLT_BUILD_TYPE) \
   ro.colt.build.version=$(COLT_BUILD_VERSION) \
   ro.colt.build.type=$(COLT_BUILD_TYPE) \
   ro.colt.build.date=$(COLT_BUILD_DATE) \
-  ro.colt.ziptype=$(COLT_BUILD_VARIANT) \
   ro.colt.build.fingerprint=$(COLT_BUILD_FINGERPRINT) \
   ro.colt.build.maintainer=$(COLT_BUILD_MAINTAINER) \
-  ro.modversion=$(COLT_MAJOR_VERSION) \
   ro.colt.main.version=$(COLT_MAJOR_VERSION)
+  ro.colt.releasetype=$(COLT_BUILD_TYPE) \
+  ro.colt.ziptype=$(COLT_BUILD_ZIP_TYPE) \
+  ro.modversion=$(COLT_MAJOR_VERSION)
 
 COLT_DISPLAY_VERSION := ColtOS-$(COLT_MAJOR_VERSION)-$(COLT_BUILD_TYPE)
 

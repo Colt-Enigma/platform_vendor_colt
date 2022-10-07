@@ -176,7 +176,6 @@
     -->
     <string name="config_wallpaperCropperPackage" translatable="false">com.android.wallpaper</string>
 
-<<<<<<< HEAD
     <string name="config_systemAmbientAudioIntelligence">com.google.android.as</string>
     <string name="config_systemAudioIntelligence">com.google.android.as</string>
     <string name="config_systemNotificationIntelligence">com.google.android.as</string>
