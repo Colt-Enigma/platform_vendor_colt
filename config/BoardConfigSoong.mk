@@ -33,6 +33,7 @@ SOONG_CONFIG_coltGlobalVars += \
     has_hh_vsync_issue \
     has_memfd_backport \
     camera_needs_client_info \
+    gralloc_handle_has_reserved_size \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
     target_ld_shim_libs \
@@ -56,6 +57,7 @@ SOONG_CONFIG_coltQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_coltGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_coltGlobalVars_has_hh_vsync_issue := $(TARGET_HAS_HH_VSYNC_ISSUE)
 SOONG_CONFIG_coltGlobalVars_has_memfd_backport := $(TARGET_HAS_MEMFD_BACKPORT)
 SOONG_CONFIG_coltNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
@@ -67,6 +69,7 @@ SOONG_CONFIG_coltGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_
 
 # Set default values
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY ?= 0
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
