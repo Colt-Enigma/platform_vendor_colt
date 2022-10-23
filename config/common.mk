@@ -137,7 +137,7 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
-    COLTThemesStub \
+    ColtThemesStub \
     ThemePicker \
     SimpleDeviceConfig \
     SoftAPManager
