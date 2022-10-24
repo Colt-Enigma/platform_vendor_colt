@@ -42,7 +42,8 @@ PRODUCT_PACKAGES += \
     AndroidClearThemeOverlay \
     AndroidVividThemeOverlay \
     AndroidSnowPaintDropThemeOverlay \
-    AndroidEspressoThemeOverlay
+    AndroidEspressoThemeOverlay \
+    DarkBgOverlay
 
 # Lockscreen clock fonts
 PRODUCT_PACKAGES += \
