@@ -161,6 +161,15 @@ PRODUCT_PACKAGES += \
 # Fonts
 include vendor/colt/config/fonts.mk
 
+# Smartspace
+PRODUCT_PACKAGES += \
+    DeviceIntelligenceNetworkPrebuilt \
+    DevicePersonalizationPrebuiltPixel2021 \
+    PixelConfigOverlayCommon
+
+PRODUCT_COPY_FILES += \
+    vendor/colt/prebuilt/common/etc/permissions/privapp-permissions-google-as.xml:product/etc/permissions/privapp-permissions-google-as.xml
+
 # Themes
 PRODUCT_PACKAGES += \
     ThemePicker \
