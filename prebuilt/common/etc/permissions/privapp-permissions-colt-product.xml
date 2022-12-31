@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+
+<privapp-permissions package="com.google.android.apps.security.securityhub">
+        <!-- Required so that security hub can call PendingIntents provided by Play. -->
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+        <!-- Required so that security hub can present one security view across all users. -->
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <!-- Required to allow security hub to identify when a system update is needed. -->
+        <permission name="android.permission.READ_SYSTEM_UPDATE_INFO"/>
+        <!-- Required to allow security hub to check if Safety Center is enabled. -->
+        <permission name="android.permission.READ_SAFETY_CENTER_STATUS"/>
+    </privapp-permissions>
+</permissions>

@@ -132,6 +132,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.control_privapp_permissions=log
 
+# ColtOS Perms
+PRODUCT_COPY_FILES += \
+   vendor/colt/prebuilt/common/etc/permissions/privapp-permissions-colt-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-colt.xml \
+
+
 # Include AOSP audio files
 include vendor/colt/config/aosp_audio.mk
 
@@ -172,7 +177,8 @@ PRODUCT_PACKAGES += \
     SoftAPManager \
     ParallelSpace \
     GameSpace \
-    Seedvault
+    Seedvault \
+    SecurityHubPrebuilt
 
 # CustomThemes
 PRODUCT_PACKAGES += \
