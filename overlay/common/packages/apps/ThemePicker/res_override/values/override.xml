@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources>
-    <string name="themes_stub_package" translatable="false">com.colt.stub</string>
-    <string name="clocks_stub_package" translatable="false">com.colt.stub</string>
+    <!-- Package of the stub apk containing the themes descriptions -->
+    <string name="themes_stub_package" translatable="false">net.arrowos.customisation</string>
 
 </resources>
