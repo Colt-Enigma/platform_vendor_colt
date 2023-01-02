@@ -112,6 +112,22 @@ PRODUCT_PACKAGES += \
     FontSamOverlay \
     FontVictorOverlay
 
+# Lockscreen clock fonts
+PRODUCT_PACKAGES += \
+    ClockFontAdventProOverlay \
+    ClockFontBigNoodleTiltingOverlay \
+    ClockFontCherrySwashOverlay \
+    ClockFontHeadlineOverlay \
+    ClockFontRoadRageOverlay \
+    ClockFontSnowstormOverlay \
+    ClockFontViburOverlay \
+    ClockFontAlienLeagueOverlay \
+    ClockFontBikoOverlay \
+    ClockFontGinoraSansOverlay \
+    ClockFontRivieraOverlay \
+    ClockFontSedgwickAveOverlay \
+    ClockFontUnionOverlay
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/octavi/fonts/prebuilt,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
     vendor/octavi/fonts/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
