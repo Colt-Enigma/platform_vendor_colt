@@ -32,8 +32,21 @@ PRODUCT_PACKAGES += \
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI \
-    Launcher3QuickStep
+    SystemUI
+
+ifeq ($(PRODUCT_TYPE), go)
+PRODUCT_PACKAGES += \
+    ArrowLauncherGo
+
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    ArrowLauncherGo
+else
+PRODUCT_PACKAGES += \
+    ArrowLauncher
+
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    ArrowLauncher
+endif
 
 # SystemUI
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -145,7 +158,8 @@ PRODUCT_PACKAGES += \
     ColtThemesStub \
     ThemePicker \
     SimpleDeviceConfig \
-    SoftAPManager
+    SoftAPManager \
+    ParallelSpace
 
 # Seedvault
 PRODUCT_PACKAGES += \
