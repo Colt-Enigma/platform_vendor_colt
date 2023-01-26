@@ -155,7 +155,6 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
-    ColtThemesStub \
     ThemePicker \
     TouchGestures \
     SimpleDeviceConfig \
