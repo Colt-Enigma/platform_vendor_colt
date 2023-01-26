@@ -161,6 +161,14 @@ PRODUCT_PACKAGES += \
     SoftAPManager \
     ParallelSpace
 
+# CustomThemes
+PRODUCT_PACKAGES += \
+    AndroidBlackThemeOverlay \
+    AndroidClearThemeOverlay \
+    AndroidVividThemeOverlay \
+    AndroidSnowPaintDropThemeOverlay \
+    AndroidEspressoThemeOverlay
+
 # Seedvault
 PRODUCT_PACKAGES += \
     Seedvault
