@@ -122,11 +122,27 @@ PRODUCT_PACKAGES += \
     ClockFontSnowstormOverlay \
     ClockFontViburOverlay \
     ClockFontAlienLeagueOverlay \
+    ClockFontOdibeeSansOverlay \
     ClockFontBikoOverlay \
     ClockFontGinoraSansOverlay \
+    ClockFontPermanentMarkerOverlay \
     ClockFontRivieraOverlay \
-    ClockFontSedgwickAveOverlay \
-    ClockFontUnionOverlay
+    ClockFontUnionOverlay \
+    ClockFontVG5000Overlay \
+    ClockFont3DIsometricBlackOverlay \
+    ClockFont3DIsometricBoldOverlay \
+    ClockFontBalticBoddenOverlay \
+    ClockFontBalticCoastOverlay \
+    ClockFontBalticDuneOverlay \
+    ClockFontBalticStormOverlay \
+    ClockFontCafe24DecoshadowOverlay \
+    ClockFontFortaOverlay \
+    ClockFontMuseoModernoOverlay \
+    ClockFontMXWasgardOverlay \
+    ClockFontNeptunCATOverlay \
+    ClockFontProdeltCoOverlay \
+    ClockFontRubikGlitchOverlay \
+    ClockFontTourneyMediumOverlay
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/octavi/fonts/prebuilt,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
