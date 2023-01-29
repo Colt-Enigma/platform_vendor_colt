@@ -180,6 +180,10 @@ PRODUCT_PACKAGES += \
     AndroidSnowPaintDropThemeOverlay \
     AndroidEspressoThemeOverlay
 
+# Aperture camera
+PRODUCT_PACKAGES += \
+    Aperture
+
 # Seedvault
 PRODUCT_PACKAGES += \
     Seedvault
