@@ -62,6 +62,9 @@
         <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSettingsActivity</item>
         <item>com.google.android.settings.intelligence/com.google.android.settings.intelligence.modules.search.SearchActivity</item>
         <item>com.google.android.settings.intelligence/com.google.android.settings.intelligence.modules.search.indexing.SearchResultDumpProvider</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.ActiveReceiver</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.Receiver</item>
+        <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService.SecretCodeReceiver</item>
     </string-array>
 
     <!-- Force enable styles -->
