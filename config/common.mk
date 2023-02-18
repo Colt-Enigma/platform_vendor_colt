@@ -170,7 +170,8 @@ PRODUCT_PACKAGES += \
     TouchGestures \
     SimpleDeviceConfig \
     SoftAPManager \
-    ParallelSpace
+    ParallelSpace \
+    GameSpace
 
 # CustomThemes
 PRODUCT_PACKAGES += \
