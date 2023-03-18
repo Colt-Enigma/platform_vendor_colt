@@ -35,6 +35,7 @@ SOONG_CONFIG_coltGlobalVars += \
     camera_needs_client_info \
     camera_override_format_from_reserved \
     camera_uses_newer_hidl_override_format \
+    bootloader_message_offset \
     disable_bluetooth_le_read_buffer_size_v2 \
     disable_bluetooth_le_set_host_feature \
     gralloc_handle_has_reserved_size \
@@ -90,6 +91,7 @@ SOONG_CONFIG_coltGlobalVars_camera_uses_newer_hidl_override_format := $(TARGET_C
 SOONG_CONFIG_coltQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 
 # Set default values
+BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
@@ -109,6 +111,7 @@ SOONG_CONFIG_coltGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_L
 SOONG_CONFIG_coltGlobalVars_target_surfaceflinger_fod_lib := $(TARGET_SURFACEFLINGER_FOD_LIB)
 SOONG_CONFIG_coltGlobalVars_camera_skip_kind_check := $(TARGET_CAMERA_SKIP_KIND_CHECK)
 SOONG_CONFIG_coltGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACEFLINGER_UDFPS_LIB)
+SOONG_CONFIG_coltGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
 
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_coltQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
