@@ -34,20 +34,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
-ifeq ($(PRODUCT_TYPE), go)
-PRODUCT_PACKAGES += \
-    ArrowLauncherGo
-
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    ArrowLauncherGo
-else
-PRODUCT_PACKAGES += \
-    ArrowLauncher
-
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    ArrowLauncher
-endif
-
 # SystemUI
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
@@ -165,7 +151,6 @@ PRODUCT_PACKAGES += \
 # Themes
 PRODUCT_PACKAGES += \
     ThemePicker \
-    TouchGestures \
     SimpleDeviceConfig \
     SoftAPManager \
     ParallelSpace \
@@ -175,11 +160,7 @@ PRODUCT_PACKAGES += \
 
 # CustomThemes
 PRODUCT_PACKAGES += \
-    AndroidBlackThemeOverlay \
-    AndroidClearThemeOverlay \
-    AndroidVividThemeOverlay \
-    AndroidSnowPaintDropThemeOverlay \
-    AndroidEspressoThemeOverlay
+    AndroidBlackThemeOverlay
 
 # Aperture camera
 PRODUCT_PACKAGES += \
@@ -257,10 +238,15 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
+    SystemUI \
+    Launcher3QuickStep
+
+# Required packages
+PRODUCT_PACKAGES += \
+    Launcher3QuickStep
 
 # Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED ?= true
+TARGET_FACE_UNLOCK_SUPPORTED ?= false
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
 PRODUCT_PACKAGES += \
     FaceUnlockService
