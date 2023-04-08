@@ -271,11 +271,5 @@ DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-lineagehw.xml
 
-# UDFPS Animations
-ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
-PRODUCT_PACKAGES += \
-    UdfpsResources
-endif
-
 # Include vendor xtras
 include vendor/xtras/xtras.mk
