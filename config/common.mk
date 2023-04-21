@@ -128,6 +128,11 @@ include vendor/colt/config/bootanimation.mk
 # Colt Versioning
 include vendor/colt/config/version.mk
 
+# GAPPS
+ifeq ($(WITH_GAPPS),true)
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+endif
+
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 

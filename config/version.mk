@@ -21,6 +21,10 @@ COLT_BUILD_TYPE ?= Unofficial
 COLT_BUILD_MAINTAINER ?= Unknown
 COLT_BUILD_ZIP_TYPE := VANILLA
 
+ifeq ($(WITH_GAPPS), true)
+COLT_BUILD_ZIP_TYPE := GAPPS
+endif
+
 # Colt Release
 ifeq ($(COLT_BUILD_TYPE), Official)
   OFFICIAL_DEVICES = $(shell cat vendor/colt/enigma.devices)
