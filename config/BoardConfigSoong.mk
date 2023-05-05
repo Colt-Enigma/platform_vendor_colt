@@ -13,7 +13,7 @@ EXPORT_TO_SOONG := \
 
 # Setup SOONG_CONFIG_* vars to export the vars listed above.
 # Documentation here:
-# https://github.com/LineageOS/android_build_soong/commit/8328367c44085b948c003116c0ed74a047237a69
+# https://github.com/Colt-Enigma/platform_build_soong/commit/8328367c44085b948c003116c0ed74a047237a69
 
 SOONG_CONFIG_NAMESPACES += coltVarsPlugin
 
@@ -43,6 +43,13 @@ SOONG_CONFIG_coltGlobalVars += \
     camera_needs_client_info_lib_oplus \
     needs_camera_boottime \
     target_alternative_futex_waiters \
+    target_health_charging_control_charging_path \
+    target_health_charging_control_charging_enabled \
+    target_health_charging_control_charging_disabled \
+    target_health_charging_control_deadline_path \
+    target_health_charging_control_supports_bypass \
+    target_health_charging_control_supports_deadline \
+    target_health_charging_control_supports_toggle \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
     target_ld_shim_libs \
@@ -99,6 +106,11 @@ BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED ?= 1
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED ?= 0
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS ?= true
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE ?= false
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE ?= true
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY ?= 0
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
@@ -122,6 +134,13 @@ SOONG_CONFIG_coltGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OF
 SOONG_CONFIG_coltGlobalVars_target_trust_usb_control_path := $(TARGET_TRUST_USB_CONTROL_PATH)
 SOONG_CONFIG_coltGlobalVars_target_trust_usb_control_enable := $(TARGET_TRUST_USB_CONTROL_ENABLE)
 SOONG_CONFIG_coltGlobalVars_target_trust_usb_control_disable := $(TARGET_TRUST_USB_CONTROL_DISABLE)
+SOONG_CONFIG_coltGlobalVars_target_health_charging_control_charging_path := $(TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH)
+SOONG_CONFIG_coltGlobalVars_target_health_charging_control_charging_enabled := $(TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED)
+SOONG_CONFIG_coltGlobalVars_target_health_charging_control_charging_disabled := $(TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED)
+SOONG_CONFIG_coltGlobalVars_target_health_charging_control_deadline_path := $(TARGET_HEALTH_CHARGING_CONTROL_DEADLINE_PATH)
+SOONG_CONFIG_coltGlobalVars_target_health_charging_control_supports_bypass := $(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS)
+SOONG_CONFIG_coltGlobalVars_target_health_charging_control_supports_deadline := $(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE)
+SOONG_CONFIG_coltGlobalVars_target_health_charging_control_supports_toggle := $(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE)
 
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_coltQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
