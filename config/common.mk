@@ -164,7 +164,7 @@ include vendor/colt/config/fonts.mk
 # Smartspace
 PRODUCT_PACKAGES += \
     DeviceIntelligenceNetworkPrebuilt \
-    DevicePersonalizationPrebuiltPixel2022 \
+    DevicePersonalizationPrebuiltPixel2021 \
     PixelConfigOverlayCommon
 
 PRODUCT_COPY_FILES += \
