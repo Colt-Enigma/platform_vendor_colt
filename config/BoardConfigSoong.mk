@@ -38,6 +38,7 @@ SOONG_CONFIG_coltGlobalVars += \
     bootloader_message_offset \
     disable_bluetooth_le_read_buffer_size_v2 \
     disable_bluetooth_le_set_host_feature \
+    gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
     camera_needs_client_info_lib \
     camera_needs_client_info_lib_oplus \
@@ -100,11 +101,13 @@ SOONG_CONFIG_coltGlobalVars_target_alternative_futex_waiters := $(TARGET_ALTERNA
 SOONG_CONFIG_coltGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 SOONG_CONFIG_coltGlobalVars_camera_uses_newer_hidl_override_format := $(TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT)
 SOONG_CONFIG_coltQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
+SOONG_CONFIG_coltGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
+TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED ?= 1
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED ?= 0
