@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:priv-android="http://schemas.android.com/apk/prv/res/android" xmlns:android="http://schemas.android.com/apk/res/android" android:autoMirrored="true">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:startColor="@*android:color/system_accent1_50" android:endColor="?android:attr/colorAccent" android:angle="0" android:centerColor="@*android:color/system_accent1_100" />
+            <size android:height="42dp"/>
+            <corners android:radius="24dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="42dp"/>
+            <solid android:color="#1d000000"/>
+            <gradient android:startColor="@*android:color/system_accent1_50" android:endColor="?android:attr/colorAccent" android:angle="0" android:centerColor="@*android:color/system_accent1_200" />
+            <corners android:radius="30dp"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,6 @@
+//
+runtime_resource_overlay {
+    name: "VolumeStyle1Overlay",
+    theme: "VolumeStyle1",
+    product_specific: true,
+}

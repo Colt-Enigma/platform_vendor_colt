@@ -326,6 +326,14 @@ PRODUCT_PACKAGES += \
     InsideWiFiOverlay \
     BarsWiFiOverlay
 
+# Volume Styles
+PRODUCT_PACKAGES += \
+    VolumeStyle1Overlay \
+    VolumeStyle2Overlay \
+    VolumeStyle3Overlay \
+    VolumeStyle4Overlay \
+    VolumeStyle5Overlay
+
 # RRO Overlays
 PRODUCT_PACKAGES += \
     NavigationBarModeGesturalOverlayFS

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="com.custom.overlay.systemui.volume2" platformBuildVersionCode="31" platformBuildVersionName="12">
+    <uses-sdk android:minSdkVersion="30" android:targetSdkVersion="30"/>
+    <overlay android:priority="1" android:targetPackage="com.android.systemui" android:category="android.customization.cu_volume"/>
+    <application android:label="2" android:hasCode="false" android:extractNativeLibs="true"/>
+</manifest>
