@@ -40,25 +40,23 @@
     <!-- Whether wallpaper attribution should be shown or not. -->
     <bool name="config_show_wallpaper_attribution">false</bool>
 
-    <!-- Package name and fully-qualified class name for the wallpaper picker activity. -->
-    <string name="config_wallpaper_picker_package" translatable="false">com.android.wallpaper</string>
-    <string name="config_wallpaper_picker_class" translatable="false">com.android.customization.picker.CustomizationPickerActivity</string>
-    <!-- Fully-qualified class name for the styles & wallpaper picker activity. -->
-    <string name="config_styles_and_wallpaper_picker_class" translatable="false">com.android.customization.picker.CustomizationPickerActivity</string>
-
     <!-- Whether memory from app_info_settings is available or not. -->
     <bool name="config_show_app_info_settings_memory">true</bool>
-
-    <!-- Action name for the wallpaper picker activity. -->
-    <string name="config_wallpaper_picker_action" translatable="false">android.intent.action.MAIN</string>
-    
-    <!-- Action name for the styles & wallpaper picker activity. -->
-    <string name="config_styles_and_wallpaper_picker_action" translatable="false">android.intent.action.MAIN</string>
 
     <!-- Manufacturer backup settings to launch -->
     <string name="config_backup_settings_intent" translatable="false">settings://com.android.settings.backup.transport</string>
 
     <!-- Manufacturer backup settings label -->
     <string name="config_backup_settings_label" translatable="true">@string/backup_transport_setting_label</string>
+
+    <!-- Package name and fully-qualified class name for the wallpaper picker activity. -->
+    <string name="config_wallpaper_picker_package">com.google.android.apps.wallpaper</string>
+    <string name="config_wallpaper_picker_class">com.google.android.apps.wallpaper.picker.CategoryPickerActivity</string>
+    <!-- Fully-qualified class name for the styles & wallpaper picker activity. -->
+    <string name="config_styles_and_wallpaper_picker_class">com.android.customization.picker.CustomizationPickerActivity</string>
+    <!-- Action name for the wallpaper picker activity. -->
+    <string name="config_wallpaper_picker_action">android.intent.action.MAIN</string>
+    <!-- Action name for the styles & wallpaper picker activity. -->
+    <string name="config_styles_and_wallpaper_picker_action">android.intent.action.SET_WALLPAPER</string>
 
 </resources>
