@@ -248,7 +248,8 @@ PRODUCT_PACKAGES_DEBUG += \
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
-    Launcher3QuickStep
+    Launcher3QuickStep \
+    Settings
 
 # Required packages
 PRODUCT_PACKAGES += \
