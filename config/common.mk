@@ -131,8 +131,7 @@ include vendor/colt/config/version.mk
 
 # GApps
 ifeq ($(WITH_GAPPS), true)
-$(call inherit-product, vendor/gms/products/gms.mk)
-include vendor/gms/products/board.mk
+$(call inherit-product, vendor/gms/gms_full.mk)
 endif
 
 # Do not include art debug targets
@@ -278,9 +277,6 @@ DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 # LineageHW permission
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-lineagehw.xml
-
-# Include vendor xtras
-include vendor/xtras/xtras.mk
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile

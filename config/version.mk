@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
 endif
 
 ifdef COLT_GAPPS
-    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
+    $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
     COLT_BUILD_ZIP_TYPE := GAPPS
 endif
 
