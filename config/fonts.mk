@@ -4,12 +4,12 @@ PRODUCT_PACKAGES += \
 
 # google-sans family
 PRODUCT_PACKAGES += \
-    GoogleSans-BoldItalic.ttf \
-    GoogleSans-Bold.ttf \
     GoogleSans-Italic.ttf \
-    GoogleSans-MediumItalic.ttf \
-    GoogleSans-Medium.ttf \
     GoogleSans-Regular.ttf
+
+# Lustria family
+PRODUCT_PACKAGES += \
+    Lustria-Regular.ttf
 
 # lato family
 PRODUCT_PACKAGES += \
@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
 
 # Fraunces family
 PRODUCT_PACKAGES += \
+    Fraunces-Regular.ttf \
     Fraunces-SemiBold.ttf
 
 # BigShouldersText family
@@ -53,6 +54,57 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Barlow-Bold.ttf \
     Barlow-Medium.ttf
+	
+#Custom packages
+PRODUCT_PACKAGES += \
+    FontGInterOverlay \
+    FontGoogleSansOverlay \
+    FontGoogleSansClockOverlay \
+    FontGeometosOverlay \
+    FontHarmonySansOverlay \
+    FontLinotteSourceOverlay \
+    FontManropeOverlay \
+    FontOnePlusSansOverlay \
+    FontOneplusSlateSourceOverlay \
+    FontAclonicaSourceOverlay \
+    FontAmaranteSourceOverlay \
+    FontApiceOverlay \
+    FontAudimatOverlay \
+    FontAntipastoProSourceOverlay \
+    FontBariolSourceOverlay \
+    FontBellotaSourceOverlay \
+    FontCagliostroSourceOverlay \
+    FontCoconSourceOverlay \
+    FontComfortaaSourceOverlay \
+    FontComicSansSourceOverlay \
+    FontCoolstorySourceOverlay \
+    FontEvolveSansSourceOverlay \
+    FontExotwoSourceOverlay \
+    FontFifa2018SourceOverlay \
+    FontFucekSourceOverlay \
+    FontGrandHotelSourceOverlay \
+    FontLGSmartGothicSourceOverlay \
+    FontLemonMilkSourceOverlay \
+    FontMiSansOverlay \
+    FontNokiaPureSourceOverlay \
+    FontNunitoSourceOverlay \
+    FontOdudaSourceOverlay \
+    FontPoppinsSourceOverlay \
+    FontQuandoSourceOverlay \
+    FontRecursiveLinearOverlay \
+    FontRedressedSourceOverlay \
+    FontReemKufiSourceOverlay \
+    FontRobotoFlexOverlay \
+    FontRosemarySourceOverlay \
+    FontSamsungOneSourceOverlay \
+    FontSimpleDaySourceOverlay \
+    FontSonySketchSourceOverlay \
+    FontStoropiaSourceOverlay \
+    FontSurferSourceOverlay \
+    FontUbuntuSourceOverlay \
+    FontOppoSansOverlay \
+    FontNothiingDotOverlay\
+    FontProductSansVHOverlay
 
 # Customization overlays
 PRODUCT_PACKAGES += \
@@ -64,4 +116,5 @@ PRODUCT_PACKAGES += \
     FontVictorOverlay
 
 PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/octavi/fonts/prebuilt,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
     vendor/octavi/fonts/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml

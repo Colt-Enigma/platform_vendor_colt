@@ -43,3 +43,51 @@ PRODUCT_PACKAGES += \
     AndroidVividThemeOverlay \
     AndroidSnowPaintDropThemeOverlay \
     AndroidEspressoThemeOverlay
+
+# Lockscreen clock fonts
+PRODUCT_PACKAGES += \
+    ClockFontAdventProOverlay \
+    ClockFontBigNoodleTiltingOverlay \
+    ClockFontCherrySwashOverlay \
+    ClockFontHeadlineOverlay \
+    ClockFontRoadRageOverlay \
+    ClockFontSnowstormOverlay \
+    ClockFontViburOverlay \
+    ClockFontAlienLeagueOverlay \
+    ClockFontBikoOverlay \
+    ClockFontGinoraSansOverlay \
+    ClockFontRivieraOverlay \
+    ClockFontSedgwickAveOverlay \
+    ClockFontUnionOverlay \
+    ClockFontAccuratistOverlay \
+    ClockFontAclonicaOverlay \
+    ClockFontAmaranteOverlay \
+    ClockFontBariolOverlay \
+    ClockFontCagliostroOverlay \
+    ClockFontCoconOverlay \
+    ClockFontComfortaaOverlay \
+    ClockFontComicSansOverlay \
+    ClockFontCoolstoryOverlay \
+    ClockFontExotwoOverlay \
+    ClockFontFifa2018Overlay \
+    ClockFontGrandHotelOverlay \
+    ClockFontHarmonySansOverlay \
+    ClockFontLatoOverlay \
+    ClockFontLGSmartGothicOverlay \
+    ClockFontLinotteOverlay \
+    ClockFontNokiaPureOverlay \
+    ClockFontNunitoOverlay \
+    ClockFontOneplusSansOverlay \
+    ClockFontOneplusSlateOverlay \
+    ClockFontOswaldOverlay \
+    ClockFontQuandoOverlay \
+    ClockFontRedressedOverlay \
+    ClockFontReemKufiOverlay \
+    ClockFontRobotoCondensedOverlay \
+    ClockFontRosemaryOverlay \
+    ClockFontRubikOverlay \
+    ClockFontSamsungOneOverlay \
+    ClockFontSonySketchOverlay \
+    ClockFontStoropiaOverlay \
+    ClockFontSurferOverlay \
+    ClockFontUbuntuOverlay
