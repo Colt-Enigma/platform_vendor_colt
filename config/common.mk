@@ -278,9 +278,6 @@ DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 PRODUCT_COPY_FILES += \
     vendor/colt/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-lineagehw.xml
 
-# Include vendor xtras
-include vendor/xtras/xtras.mk
-
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
