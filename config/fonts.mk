@@ -145,5 +145,5 @@ PRODUCT_PACKAGES += \
     ClockFontTourneyMediumOverlay
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/octavi/fonts/prebuilt,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
-    vendor/octavi/fonts/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+    $(call find-copy-subdir-files,*,vendor/colt/fonts/prebuilt,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
+    vendor/colt/fonts/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
