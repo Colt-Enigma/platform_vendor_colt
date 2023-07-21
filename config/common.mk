@@ -54,6 +54,10 @@ ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
 PRODUCT_PACKAGES += \
     ParanoidSense
 
+# GameSpace
+PRODUCT_PACKAGES += \
+    GameSpace
+
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.face.sense_service.enabled=true
 
