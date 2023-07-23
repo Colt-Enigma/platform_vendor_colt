@@ -14,6 +14,35 @@
 # limitations under the License.
 #
 
+# Brightness slider styles
+PRODUCT_PACKAGES += \
+    BrightnessSliderFilledOverlay \
+    BrightnessSliderThinOverlay \
+    BrightnessSliderAcunOverlay \
+    BrightnessSliderBangOverlay \
+    BrightnessSliderBangOverlay \
+    BrightnessSliderBang2Overlay \
+    BrightnessSliderNeumorphOverlay \
+    BrightnessSliderNeumorph2Overlay \
+    BrightnessSliderRealmeOverlay \
+    BrightnessSliderRealme2Overlay \
+    BrightnessSliderSemyOverlay \
+    BrightnessSliderSwapOverlay \
+    BrightnessSliderSwap2Overlay \
+    BrightnessSliderCyberpunkOverlay \
+    BrightnessSliderGradiantOverlay \
+    BrightnessSliderOutlineOverlay \
+    BrightnessSliderShadedOverlay \
+    BrightnessSliderThinOutlineOverlay \
+    BrightnessSliderTranslucentOverlay \
+    BrightnessSliderLeafyOutlineOverlay \
+    BrightnessSliderMinimalThumbOverlay \
+    BrightnessSliderOldSchoolThumbOverlay \
+    BrightnessSliderRoundedClipOverlay \
+    BrightnessSliderThumbSliderOverlay \
+    BrightnessSliderLineOverlay \
+    BrightnessSliderLightyOverlay
+
 # QS Panel
 PRODUCT_PACKAGES += \
     QSOutline \

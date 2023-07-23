@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:gravity="fill_horizontal|center" android:id="@android:id/background">
+		<selector>
+			<item android:state_pressed="true">
+				<shape android:tint="?android:colorAccent" android:shape="rectangle">
+					<size android:height="35.0dip" />
+					<solid android:color="#1A616161" />
+    
+			<corners android:radius="35.0dip" />
+				</shape>
+ 
+			</item>
+			<item android:state_pressed="false">
+				<shape android:tint="?android:colorAccent" android:shape="rectangle">
+					<size android:height="35.0dip" />
+					<solid android:color="#1A616161" />
+ 
+				<corners android:radius="35.0dip" />
+				</shape>
+			</item>
+		</selector>
+	</item>
+	<item android:gravity="fill_horizontal|center" android:id="@android:id/progress">
+		<scale android:scaleWidth="100%">
+			<selector>
+				<item android:state_pressed="true">
+  <inset android:insetLeft="0.0dip"
+       android:insetRight="0.0dip">
+					<shape android:tint="?android:colorAccent" android:shape="rectangle">
+						<size android:height="35.0dip" />
+						<solid android:color="#88525252" />
+      <stroke android:width="4dp"
+              android:color="#ffffffff" />
+						<corners android:radius="35.0dip" />
+					</shape>
+  </inset >
+				</item>
+				<item android:state_pressed="false">
+				      <inset android:insetLeft="0.0dip"
+       android:insetRight="0.0dip">
+					<shape android:tint="?android:colorAccent" android:shape="rectangle">
+						<size android:height="35.0dip" />
+						<solid android:color="#9A525252" />
+   <stroke android:width="4dp"
+              android:color="#ffffffff" />
+						<corners android:radius="35.0dip" />
+					</shape>
+					      </inset >
+				</item>
+
+
+			</selector>
+		</scale>
+	</item>
+</layer-list>
