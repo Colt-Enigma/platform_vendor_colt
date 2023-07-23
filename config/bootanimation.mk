@@ -16,19 +16,11 @@
 
 TARGET_BOOT_ANIMATION_RES ?= undefined
 
-ifeq ($(TARGET_BOOT_ANIMATION_RES),720x1280)
+ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
      PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/bootanimation/720x1280.zip:system/media/bootanimation.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),768x1280)
-     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/bootanimation/768x1280.zip:system/media/bootanimation.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080x1920)
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
      PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/bootanimation/1080x1920.zip:system/media/bootanimation.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080x2160)
-     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/bootanimation/1080x2160.zip:system/media/bootanimation.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080x2280)
-     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/bootanimation/1080x2280.zip:system/media/bootanimation.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440x2560)
-     PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/bootanimation/1440x2560.zip:system/media/bootanimation.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440x2880)
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440)
      PRODUCT_COPY_FILES += vendor/colt/prebuilt/common/media/bootanimation/1440x2880.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),undefined)
      $(warning Target bootanimation res is undefined, using generic bootanimation )
