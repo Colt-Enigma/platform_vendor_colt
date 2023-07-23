@@ -45,6 +45,7 @@ PRODUCT_PACKAGES += \
 
 # QS Panel
 PRODUCT_PACKAGES += \
+    A11QSUI \
     QSOutline \
     QSTwoToneAccent \
     QSShaded \
