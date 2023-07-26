@@ -1,6 +1,0 @@
-//
-runtime_resource_overlay {
-    name: "BrightnessSliderOldSchoolThumbOverlay",
-    theme: "BrightnessSliderOldSchoolThumb",
-    product_specific: true,
-}
