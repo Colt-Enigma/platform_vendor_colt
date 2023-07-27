@@ -137,8 +137,9 @@ include vendor/colt/config/version.mk
 
 # GAPPS
 ifeq ($(WITH_GAPPS),true)
-$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+$(call inherit-product-if-exists, vendor/google/gms/config.mk)
 endif
+$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false

@@ -31,8 +31,3 @@ PRODUCT_COPY_FILES += \
     $(RINGTONE_PATH)/Rockin.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Rockin.ogg \
     $(RINGTONE_PATH)/Sheep.mp3:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Sheep.mp3 \
     $(RINGTONE_PATH)/Yukaay.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Yukaay.ogg
-
-# 2019 Material product sounds (CC-BY 4.0)
-# Source: https://material.io/design/sound/sound-resources.html
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/colt/sounds/material/,$(TARGET_COPY_OUT_PRODUCT)/media/audio)
