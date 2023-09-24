@@ -15,7 +15,7 @@
 #
 
 # ColtOS Versioning System
-COLT_MAJOR_VERSION = v13.3
+COLT_MAJOR_VERSION = v13.4
 COLT_RELEASE_VERSION = minimal
 COLT_BUILD_TYPE ?= Unofficial
 COLT_BUILD_MAINTAINER ?= Unknown
