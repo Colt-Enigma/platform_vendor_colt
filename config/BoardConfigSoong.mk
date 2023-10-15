@@ -33,7 +33,7 @@ SOONG_CONFIG_coltGlobalVars += \
     has_hh_vsync_issue \
     has_memfd_backport \
     camera_needs_client_info \
-    camera_uses_newer_hidl_override_format \
+    camera_override_format_from_reserved \
     uses_nothing_camera \
     disable_bluetooth_le_read_buffer_size_v2 \
     disable_bluetooth_le_set_host_feature \
@@ -83,11 +83,12 @@ SOONG_CONFIG_coltGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TI
 SOONG_CONFIG_coltGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
 SOONG_CONFIG_coltGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
 SOONG_CONFIG_coltGlobalVars_target_alternative_futex_waiters := $(TARGET_ALTERNATIVE_FUTEX_WAITERS)
-SOONG_CONFIG_coltGlobalVars_camera_uses_newer_hidl_override_format := $(TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT)
+SOONG_CONFIG_coltGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 SOONG_CONFIG_coltGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 
 # Set default values
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
+TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY ?= 0
