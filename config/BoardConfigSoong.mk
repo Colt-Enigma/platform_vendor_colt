@@ -60,8 +60,7 @@ SOONG_CONFIG_coltGlobalVars += \
     target_surfaceflinger_udfps_lib \
     target_trust_usb_control_path \
     target_trust_usb_control_enable \
-    target_trust_usb_control_disable \
-    uses_camera_parameter_lib
+    target_trust_usb_control_disable
 
 SOONG_CONFIG_NAMESPACES += coltNvidiaVars
 SOONG_CONFIG_coltNvidiaVars += \
