@@ -163,7 +163,8 @@ PRODUCT_PACKAGES += \
     ParallelSpace \
     GameSpace \
     Seedvault \
-    SecurityHubPrebuilt
+    SecurityHubPrebuilt \
+    TouchGestures
 
 # Aperture camera
 PRODUCT_PACKAGES += \
