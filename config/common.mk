@@ -130,8 +130,7 @@ include vendor/colt/config/version.mk
 
 # GApps
 ifeq ($(WITH_GAPPS), true)
-$(call inherit-product, vendor/gms/products/gms.mk)
-include vendor/gms/products/board.mk
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
 endif
 
 # Do not include art debug targets
