@@ -72,7 +72,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.colt.main.version=$(COLT_MAJOR_VERSION)
   ro.colt.releasetype=$(COLT_BUILD_TYPE) \
   ro.colt.ziptype=$(COLT_BUILD_ZIP_TYPE) \
-  ro.modversion=$(COLT_MAJOR_VERSION)
+  ro.modversion=$(COLT_MAJOR_VERSION) \
+  ro.colt.battery?=$(COLT_BATTERY) \
+  ro.colt.chipset?=$(COLT_CHIPSET) \
+  ro.colt.display_resolution?=$(COLT_DISPLAY)
+
 
 COLT_DISPLAY_VERSION := ColtOS-$(COLT_MAJOR_VERSION)-$(COLT_BUILD_TYPE)
 
